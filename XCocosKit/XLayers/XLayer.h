@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
-#import "TouchReceiver.h"
+#import "XTouchReceiver.h"
 
 @interface XLayer : CCLayer
 {

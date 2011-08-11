@@ -10,7 +10,7 @@
 #import "cocos2d.h"
 #import "XLayer.h"
 #import "XButton.h"
-#import "Level.h"
+#import "TapLevel.h"
 
 
 typedef enum GameMode
@@ -30,7 +30,7 @@ typedef enum GameMode
 	NSMutableArray* pressedButtons;
 
 	int currentLevelIndex;
-	Level* currentLevel;
+	TapLevel* currentLevel;
 	int correctTapCount;
 	
 	float currentTime;

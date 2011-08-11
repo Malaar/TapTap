@@ -55,7 +55,7 @@
 		NSAssert(arrLevels, @"dictionary of levels is nil !!!");
 		for(NSDictionary* dict in arrLevels)
 		{
-			Level* level = [Level levelFromDictionary:dict];
+			TapLevel* level = [TapLevel levelFromDictionary:dict];
 			[levels addObject:level];
 		}
 		currentLevel = [levels objectAtIndex:currentLevelIndex];

@@ -6,10 +6,10 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "Level.h"
+#import "TapLevel.h"
 
 
-@implementation Level
+@implementation TapLevel
 
 @synthesize maxHighlightedButton;
 @synthesize highlightingTime;
@@ -17,7 +17,7 @@
 
 + (id) levelFromDictionary:(NSDictionary*)aDictionary
 {
-	return [[[Level alloc] initFromDictionary:aDictionary] autorelease];
+	return [[[TapLevel alloc] initFromDictionary:aDictionary] autorelease];
 }
 
 - (id) initFromDictionary:(NSDictionary*)aDictionary

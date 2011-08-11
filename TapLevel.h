@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface Level : NSObject
+@interface TapLevel : NSObject
 {
 	int maxHighlightedButton;		///< 
 	float highlightingTime;			///< in seconds

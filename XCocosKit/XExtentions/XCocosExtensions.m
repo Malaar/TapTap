@@ -6,7 +6,7 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "CocosExtensions.h"
+#import "XCocosExtensions.h"
 
 
 @implementation CCNode (Extension)

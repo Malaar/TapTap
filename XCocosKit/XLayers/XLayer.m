@@ -7,7 +7,7 @@
 //
 
 #import "XLayer.h"
-#import "TouchReceiver.h"
+#import "XTouchReceiver.h"
 
 
 @implementation XLayer
@@ -56,7 +56,7 @@
 	{
 		CGPoint globalPos = [touch locationInView: touch.view];
 		globalPos = [[CCDirector sharedDirector] convertToGL:globalPos];
-		for(id<TouchReceiver> tr in touchReseivers)
+		for(id<XTouchReceiver> tr in touchReseivers)
 		{
 			[tr touchBegin:globalPos];
 		}
@@ -69,7 +69,7 @@
 	{
 		CGPoint globalPos = [touch locationInView: touch.view];
 		globalPos = [[CCDirector sharedDirector] convertToGL:globalPos];
-		for(id<TouchReceiver> tr in touchReseivers)
+		for(id<XTouchReceiver> tr in touchReseivers)
 		{
 			[tr touchMove:globalPos];
 		}
@@ -82,7 +82,7 @@
 	{
 		CGPoint globalPos = [touch locationInView: touch.view];
 		globalPos = [[CCDirector sharedDirector] convertToGL:globalPos];
-		for(id<TouchReceiver> tr in touchReseivers)
+		for(id<XTouchReceiver> tr in touchReseivers)
 		{
 			[tr touchEnd:globalPos];
 		}

@@ -7,7 +7,7 @@
 //
 
 #import "XButton.h"
-#import "CocosExtensions.h"
+#import "XCocosExtensions.h"
 
 
 @implementation XButton

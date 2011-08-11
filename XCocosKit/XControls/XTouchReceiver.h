@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-@protocol TouchReceiver
+@protocol XTouchReceiver
 
 @optional
 - (void) touchBegin:(CGPoint) aGlobalPos;
