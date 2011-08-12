@@ -9,13 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 #import "XTouchReceiver.h"
+#import "XTargetedAction.h"
 
 @class XButton;
 
 //==============================================================================
 //==============================================================================
 //==============================================================================
-@protocol ButtonDelegate <NSObject>
+@protocol XButtonDelegate <NSObject>
 @optional
 - (void) buttonPressed:(XButton*) aButton;
 - (void) buttonReleased:(XButton*) aButton;
@@ -24,15 +25,17 @@
 //==============================================================================
 //==============================================================================
 //==============================================================================
-@interface XButton : CCNode <XTouchReceiver>
+@interface XButton : CCNode <XTouchReceiver, XTargetedActionProtocol>
 {
-    id<ButtonDelegate> delegate;
+    id<XButtonDelegate> delegate;
 	BOOL enable;
 	BOOL selected;
 	
 	CCSprite* normalSprite;
 	CCSprite* selectedSprite;
 	CCSprite* disabledSprite;
+	
+	XTargetedAction* targetedAction;
 }
 
 @property (nonatomic, assign) BOOL enable;
@@ -43,7 +46,7 @@
 
 - (id) initWithNormalFrame:(CCSpriteFrame*)aNormalFrame selectedFrame:(CCSpriteFrame*)aSelectedFrame;
 - (id) initWithNormalFrame:(CCSpriteFrame*)aNormalFrame selectedFrame:(CCSpriteFrame*)aSelectedFrame disabledFrame:(CCSpriteFrame*)aDisabledFrame;
-- (void) setDelegate:(id<ButtonDelegate>) aDelegate;
+- (void) setDelegate:(id<XButtonDelegate>) aDelegate;
 
 - (void) select;
 - (void) deselect;

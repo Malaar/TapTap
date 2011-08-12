@@ -15,11 +15,13 @@
 @synthesize highlightingTime;
 @synthesize countToNextLevel;
 
+//==============================================================================
 + (id) levelFromDictionary:(NSDictionary*)aDictionary
 {
 	return [[[TapLevel alloc] initFromDictionary:aDictionary] autorelease];
 }
 
+//==============================================================================
 - (id) initFromDictionary:(NSDictionary*)aDictionary
 {
 	if( (self = [super init]) )
@@ -38,10 +40,14 @@
 	return self;
 }
 
+//==============================================================================
 - (float) getRelaxTime
 {
 	int result = rand() % ((relaxTime.location + relaxTime.length) - relaxTime.location) + relaxTime.location;
 	return result / 1000.0f;
 }
 
+//==============================================================================
+//==============================================================================
+//==============================================================================
 @end

@@ -10,8 +10,10 @@
 #import "cocos2d.h"
 #import "XTouchReceiver.h"
 
+/// Base Layer
 @interface XLayer : CCLayer
 {
+	@protected
 	NSMutableArray* touchReseivers;
 }
 

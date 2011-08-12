@@ -21,7 +21,7 @@ typedef enum GameMode
 	
 } GameMode;
 
-@interface GameScene : XLayer <ButtonDelegate>
+@interface GameScene : XLayer <XButtonDelegate>
 {
 	NSMutableArray* buttons;
 	NSMutableArray* levels;

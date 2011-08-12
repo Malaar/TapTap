@@ -12,7 +12,7 @@
 #import "GameConfig.h"
 #import "RootViewController.h"
 
-#import "GameScene.h"
+#import "MainMenu.h"
 
 @implementation TapTapRevolutionAppDelegate
 
@@ -113,7 +113,7 @@
 	[self removeStartupFlicker];
 	
 	// Run the intro Scene
-	[[CCDirector sharedDirector] runWithScene: [GameScene scene]];
+	[[CCDirector sharedDirector] runWithScene: [MainMenu scene]];
 }
 
 

@@ -12,12 +12,13 @@
 
 @implementation XLayer
 
+//==============================================================================
 - (id) init
 {
 	if( (self = [super init]) )
 	{
 		touchReseivers = [NSMutableArray new];
-		
+
 		[self loadResources];
 		[self configureChilds];
 		[self configureMenu];
@@ -26,30 +27,41 @@
 	return self;
 }
 
+//==============================================================================
 - (void) dealloc
 {
 	[touchReseivers release];
 	
-	[[CCSpriteFrameCache sharedSpriteFrameCache] removeUnusedSpriteFrames];
-	
 	[super dealloc];
 }
 
+//==============================================================================
+- (void) onExit
+{
+	[super onExit];
+	
+	[[CCSpriteFrameCache sharedSpriteFrameCache] removeUnusedSpriteFrames];
+}
+
+//==============================================================================
 - (void) loadResources
 {
 	// empty by default
 }
 
+//==============================================================================
 - (void) configureChilds
 {
 	// empty by default
 }
 
+//==============================================================================
 - (void) configureMenu
 {
 	// empty by default
 }
 
+//==============================================================================
 - (void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
 	for(UITouch* touch in touches)
@@ -63,6 +75,7 @@
 	}
 }
 
+//==============================================================================
 - (void)ccTouchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
 	for(UITouch* touch in touches)
@@ -76,6 +89,7 @@
 	}
 }
 
+//==============================================================================
 - (void)ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
 	for(UITouch* touch in touches)
@@ -89,9 +103,13 @@
 	}
 }
 
+//==============================================================================
 - (void)ccTouchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
 {
 	[self ccTouchesEnded:touches withEvent:event];
 }
 
+//==============================================================================
+//==============================================================================
+//==============================================================================
 @end
