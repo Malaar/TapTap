@@ -170,6 +170,7 @@
 - (void) menuButtonPressed:(XMenuButton*) aButton
 {
 	// play sound for button pressed here !!!
+	// as example, here we can play various sounds for various buttons
 }
 
 ////==============================================================================
