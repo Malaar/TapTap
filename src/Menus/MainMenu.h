@@ -9,8 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 #import "XLayer.h"
+#import "XMenuButton.h"
 
-@interface MainMenu : XLayer
+
+@interface MainMenu : XLayer <XMenuButtonDelegate>
 {
 
 }

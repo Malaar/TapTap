@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		022327E213F7F53700DA78D6 /* XSimpleSkinManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 022327E113F7F53700DA78D6 /* XSimpleSkinManager.m */; };
+		022328D513F82B4700DA78D6 /* XMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 022328D413F82B4700DA78D6 /* XMenuButton.m */; };
 		0231881F13AD041500B0414A /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 0231881913AD041500B0414A /* assets */; };
 		0259789D13F46F1500518A9C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0259789B13F46F1500518A9C /* main.m */; };
 		025978B913F46F4D00518A9C /* XHighlightedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 025978A113F46F4D00518A9C /* XHighlightedButton.m */; };
@@ -261,6 +263,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		022327E013F7F53700DA78D6 /* XSimpleSkinManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSimpleSkinManager.h; sourceTree = "<group>"; };
+		022327E113F7F53700DA78D6 /* XSimpleSkinManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSimpleSkinManager.m; sourceTree = "<group>"; };
+		022327EE13F81A3B00DA78D6 /* XDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDefines.h; sourceTree = "<group>"; };
+		022328D313F82B4700DA78D6 /* XMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMenuButton.h; sourceTree = "<group>"; };
+		022328D413F82B4700DA78D6 /* XMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMenuButton.m; sourceTree = "<group>"; };
 		0231881913AD041500B0414A /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
 		0259789B13F46F1500518A9C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = src/main.m; sourceTree = SOURCE_ROOT; };
 		025978A013F46F4D00518A9C /* XHighlightedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XHighlightedButton.h; path = src/Controls/XHighlightedButton.h; sourceTree = SOURCE_ROOT; };
@@ -604,9 +611,12 @@
 		025978AE13F46F4D00518A9C /* XCocosKit */ = {
 			isa = PBXGroup;
 			children = (
+				022327EE13F81A3B00DA78D6 /* XDefines.h */,
 				025978AF13F46F4D00518A9C /* XControls */,
 				025978B313F46F4D00518A9C /* XExtentions */,
 				025978B613F46F4D00518A9C /* XLayers */,
+				022327E013F7F53700DA78D6 /* XSimpleSkinManager.h */,
+				022327E113F7F53700DA78D6 /* XSimpleSkinManager.m */,
 			);
 			name = XCocosKit;
 			path = src/XCocosKit;
@@ -617,6 +627,8 @@
 			children = (
 				025978B013F46F4D00518A9C /* XButton.h */,
 				025978B113F46F4D00518A9C /* XButton.m */,
+				022328D313F82B4700DA78D6 /* XMenuButton.h */,
+				022328D413F82B4700DA78D6 /* XMenuButton.m */,
 				025978B213F46F4D00518A9C /* XTouchReceiver.h */,
 				026E703C13F5D2B600809EEF /* XTargetedAction.h */,
 				026E704913F5DA2E00809EEF /* XTargetedAction.m */,
@@ -1248,6 +1260,8 @@
 				025978C013F46F4D00518A9C /* XLayer.m in Sources */,
 				026E704A13F5DA2E00809EEF /* XTargetedAction.m in Sources */,
 				026E708713F5DEC000809EEF /* MainMenu.m in Sources */,
+				022327E213F7F53700DA78D6 /* XSimpleSkinManager.m in Sources */,
+				022328D513F82B4700DA78D6 /* XMenuButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1466,7 +1480,7 @@
 				PREBINDING = NO;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1491,7 +1505,7 @@
 				PREBINDING = NO;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

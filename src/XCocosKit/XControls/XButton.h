@@ -25,6 +25,7 @@
 //==============================================================================
 //==============================================================================
 //==============================================================================
+/// Button to add not to CCMenu but to XLayer directly
 @interface XButton : CCNode <XTouchReceiver, XTargetedActionProtocol>
 {
     id<XButtonDelegate> delegate;

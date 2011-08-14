@@ -19,4 +19,4 @@ $destDirGameScene = "../Resources/assets/Graphics/GameScene"
 
 #==================================================================
 #skins name
-$skinDefault = "SkinDefault"
+$skinDefault = "DefaultSkin"
