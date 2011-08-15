@@ -8,7 +8,7 @@
 
 #import "GameScene.h"
 #import "XHighlightedButton.h"
-
+#import "XSimpleSkinManager.h"
 
 //==============================================================================
 //==============================================================================
@@ -58,6 +58,7 @@
 		pressedCount = 0;
 		
 		// load levels
+		
 		NSString* fileName = [CCFileUtils fullPathFromRelativePath:@"assets/configs/levels.plist"];
 		NSArray* arrLevels = [NSArray arrayWithContentsOfFile:fileName];
 		NSAssert(arrLevels, @"dictionary of levels is nil !!!");
@@ -88,8 +89,10 @@
 //==============================================================================
 - (void) loadResources
 {
-	// empty by default
-	[[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"assets/graphics/buttons.plist" textureFile:@"assets/graphics/buttons.png"];
+	XSimpleSkinManager* skinManager = [XSimpleSkinManager sharedSimpleSkinManager];
+	NSString* resource = [skinManager pathToCurrentSkin:@"GameScene/buttons"];
+	[[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:[resource stringByAppendingPathExtension:@"plist"]
+															 textureFile:[resource stringByAppendingPathExtension:@"png"]];
 }
 
 //==============================================================================
