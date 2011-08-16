@@ -70,6 +70,38 @@
 	CCSprite* bg = [CCSprite spriteWithSpriteFrameName:@"MainMenuBg.png"];
 	[self addChild:bg z:0];
 	bg.anchorPoint = ccp(0.0f,0.0f);
+	
+	UIView* view = [[CCDirector sharedDirector] openGLView];
+	
+	
+	float scrollHeight = 200;
+	UIScrollView* scrollView = [[UIScrollView alloc] init];
+	scrollView.frame = CGRectMake(0, 0, 480, scrollHeight);
+	scrollView.backgroundColor = [UIColor colorWithRed:0.0f green:0.0f blue:1.0f alpha:0.5f];
+//	scrollView.alpha = 0.1f;
+	[view addSubview:scrollView];
+
+	int pageCount = 10;
+	CGSize size = CGSizeMake(200, 150);
+	for(int i = 0; i < pageCount; ++i)
+	{
+		UIView* view1 = [[UIView alloc] initWithFrame:CGRectMake(480 * i, 0, 480, scrollHeight)];
+		view1.backgroundColor = [UIColor clearColor];
+		[scrollView addSubview:view1];
+		
+		UIButton* button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+		[view1 addSubview:button];
+		button.frame = CGRectMake(480/2 - size.width/2, scrollHeight/2 - size.height/2, size.width, size.height);
+		NSString* strTitle = [NSString stringWithFormat:@"%i", i];
+		[button setTitle:strTitle forState:UIControlStateNormal];
+	}
+	
+	scrollView.contentSize = CGSizeMake(480*pageCount, scrollHeight);
+	scrollView.pagingEnabled = YES;
+	scrollView.showsHorizontalScrollIndicator = NO;
+	scrollView.canCancelContentTouches = NO;
+	scrollView.userInteractionEnabled = YES;
+	scrollView.exclusiveTouch = NO;
 }
 
 //==============================================================================
