@@ -10,6 +10,9 @@
 #import "GameScene.h"
 #import "XSimpleSkinManager.h"
 
+#import "SelectLevelMenu.h"
+
+
 //==============================================================================
 //==============================================================================
 //==============================================================================
@@ -70,9 +73,9 @@
 	CCSprite* bg = [CCSprite spriteWithSpriteFrameName:@"MainMenuBg.png"];
 	[self addChild:bg z:0];
 	bg.anchorPoint = ccp(0.0f,0.0f);
-	
+
+	/*
 	UIView* view = [[CCDirector sharedDirector] openGLView];
-	
 	
 	float scrollHeight = 200;
 	UIScrollView* scrollView = [[UIScrollView alloc] init];
@@ -102,6 +105,7 @@
 	scrollView.canCancelContentTouches = NO;
 	scrollView.userInteractionEnabled = YES;
 	scrollView.exclusiveTouch = NO;
+	//*/
 }
 
 //==============================================================================
@@ -181,6 +185,7 @@
 //==============================================================================
 - (void) helpButtonPressed
 {
+	[[CCDirector sharedDirector] replaceScene:[SelectLevelMenu scene]];
 }
 
 //==============================================================================
