@@ -64,6 +64,9 @@ XSimpleSkinManager* instance = nil;
 - (void) dealloc
 {
 	[skins release];
+	[baseSkinPath release];
+	[currentSkinName release];
+	[currentSkinPath release];
 	
 	[super dealloc];
 }
@@ -97,6 +100,7 @@ XSimpleSkinManager* instance = nil;
 		currentSkinName = [aSkinName copy];
 		NSString* path = [skins objectForKey:currentSkinName];
 		XInClassAssert(path, @"Wrong skin name !!!");
+		NSAssert(path, @"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 		path = [baseSkinPath stringByAppendingPathComponent:path];
 		path = [[NSBundle mainBundle] pathForResource:path ofType:nil];
 		[currentSkinPath release];

@@ -9,6 +9,7 @@
 #import "MainMenu.h"
 #import "GameScene.h"
 #import "XSimpleSkinManager.h"
+#import "XSettings.h"
 
 #import "SelectLevelMenu.h"
 
@@ -43,12 +44,13 @@
 //==============================================================================
 - (id) init
 {
-	// switch to current skin
-	// @TODO // get it from settings !!!
-	NSString* currentSkinName = @"default";
-	XSimpleSkinManager* skinManager = [XSimpleSkinManager sharedSimpleSkinManager];
-	[skinManager switchToSkin:currentSkinName];
-
+	{
+		// do it only in FIRST APPEARED scene: switch to current skin
+		NSString* currentSkinName = [XSettings sharedSettings].currentSkinName;
+		XSimpleSkinManager* skinManager = [XSimpleSkinManager sharedSimpleSkinManager];
+		[skinManager switchToSkin:currentSkinName];
+	}
+	
 	if( (self = [super init]) )
 	{
 		// ...

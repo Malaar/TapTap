@@ -224,6 +224,7 @@
 		02597A6513F46F7900518A9C /* JSONRepresentation.h in Headers */ = {isa = PBXBuildFile; fileRef = 0259799A13F46F6800518A9C /* JSONRepresentation.h */; };
 		026E704A13F5DA2E00809EEF /* XTargetedAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 026E704913F5DA2E00809EEF /* XTargetedAction.m */; };
 		026E708713F5DEC000809EEF /* MainMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 026E708613F5DEC000809EEF /* MainMenu.m */; };
+		0277822414010A310043B0AF /* XSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 0277822314010A310043B0AF /* XSettings.m */; };
 		0293562213FC876A00568C1B /* SelectLevelMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 0293562113FC876A00568C1B /* SelectLevelMenu.m */; };
 		02EDE36813FC6C0C007A9EDB /* XLayerViewed.m in Sources */ = {isa = PBXBuildFile; fileRef = 02EDE36713FC6C0C007A9EDB /* XLayerViewed.m */; };
 		02EDE36C13FC7089007A9EDB /* XScrollPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 02EDE36B13FC7089007A9EDB /* XScrollPanel.m */; };
@@ -502,6 +503,8 @@
 		026E704913F5DA2E00809EEF /* XTargetedAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTargetedAction.m; sourceTree = "<group>"; };
 		026E708513F5DEC000809EEF /* MainMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenu.h; sourceTree = "<group>"; };
 		026E708613F5DEC000809EEF /* MainMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenu.m; sourceTree = "<group>"; };
+		0277822214010A310043B0AF /* XSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSettings.h; sourceTree = "<group>"; };
+		0277822314010A310043B0AF /* XSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSettings.m; sourceTree = "<group>"; };
 		0293562013FC876A00568C1B /* SelectLevelMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectLevelMenu.h; sourceTree = "<group>"; };
 		0293562113FC876A00568C1B /* SelectLevelMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectLevelMenu.m; sourceTree = "<group>"; };
 		02EDE36613FC6C0C007A9EDB /* XLayerViewed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLayerViewed.h; sourceTree = "<group>"; };
@@ -1010,6 +1013,8 @@
 				50F414EB1069373D002A0D5E /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				0277822214010A310043B0AF /* XSettings.h */,
+				0277822314010A310043B0AF /* XSettings.m */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -1280,6 +1285,7 @@
 				02EDE36813FC6C0C007A9EDB /* XLayerViewed.m in Sources */,
 				02EDE36C13FC7089007A9EDB /* XScrollPanel.m in Sources */,
 				0293562213FC876A00568C1B /* SelectLevelMenu.m in Sources */,
+				0277822414010A310043B0AF /* XSettings.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

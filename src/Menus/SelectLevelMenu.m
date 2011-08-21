@@ -47,11 +47,18 @@
 	return self;
 }
 
+#pragma mark - scrollPanel delegate
 //==============================================================================
 - (void) scrollPanel:(XScrollPanel *)aScrollPanel slotPressed:(XScrollPanelSlot *)aSlot
 {
 	aSlot.baseView.backgroundColor = [UIColor redColor];
 	[[CCDirector sharedDirector] replaceScene:[MainMenu scene]];
+}
+
+//==============================================================================
+- (void) scrollPanel:(XScrollPanel*)aScrollPanel pageChangedFrom:(int)aPageFrom to:(int)aPageTo
+{
+	NSLog(@"paging %i -> %i", aPageFrom, aPageTo);
 }
 
 //==============================================================================

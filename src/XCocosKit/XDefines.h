@@ -8,11 +8,12 @@
  */
 
 #ifdef DEBUG
-	#define XInClassAssert(condition, desc)			\
-	{											\
+	#define XInClassAssert(condition, desc)										\
+	{																			\
 		NSString* strDesc = ([NSString stringWithFormat:@"[%@ - %@] : %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), desc]);	\
-		NSLog(@"%@", strDesc);			\
-		NSAssert( condition,  strDesc);	\
+		if(!condition)															\
+			NSLog(@"%@", strDesc);												\
+		NSAssert( condition,  strDesc);											\
 	}
 #else
 	#define XInClassAssert(condition, desc)

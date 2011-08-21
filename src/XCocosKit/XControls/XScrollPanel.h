@@ -22,9 +22,14 @@
 
 @class XScrollPanel;
 
+//==============================================================================
+//==============================================================================
+//==============================================================================
 @protocol XScrollPanelDelegate
 
+@optional
 - (void) scrollPanel:(XScrollPanel*)aScrollPanel slotPressed:(XScrollPanelSlot*)aSlot;
+- (void) scrollPanel:(XScrollPanel*)aScrollPanel pageChangedFrom:(int)aPageFrom to:(int)aPageTo;
 
 @end
 
@@ -32,7 +37,7 @@
 //==============================================================================
 //==============================================================================
 //==============================================================================
-@interface XScrollPanel : NSObject
+@interface XScrollPanel : NSObject <UIScrollViewDelegate>
 {
 	UIScrollView* scrollView;
 	int slotRows;										///< count of rows of slots on page
@@ -40,10 +45,11 @@
 
 	NSArray* slots;
 	
-	id<XScrollPanelDelegate> delegate;
+	NSObject<XScrollPanelDelegate>* delegate;
+	NSInteger currentPage;								///< index of current page
 }
 
-@property (nonatomic, assign) id<XScrollPanelDelegate> delegate;
+@property (nonatomic, assign) NSObject<XScrollPanelDelegate>* delegate;
 
 @property (nonatomic, readonly) UIScrollView* scrollView;
 
@@ -51,5 +57,7 @@
 
 - (void) setSlotsPerPageRows:(int)aRows cols:(int)aCols;
 - (void) setSlots:(NSArray*)aSlots;
+
+- (NSInteger) pageCount;
 
 @end
