@@ -250,6 +250,7 @@
 		E02BB507126CA50F006E46A2 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = E02BB501126CA50F006E46A2 /* Icon-Small-50.png */; };
 		E02BB508126CA50F006E46A2 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = E02BB502126CA50F006E46A2 /* Icon-72.png */; };
 		E02BB763126CC1E0006E46A2 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = E02BB762126CC1E0006E46A2 /* iTunesArtwork */; };
+		E6FE48EA1406EA3C00A0CF40 /* RateMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = E6FE48E91406EA3C00A0CF40 /* RateMenu.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -520,6 +521,8 @@
 		E02BB501126CA50F006E46A2 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
 		E02BB502126CA50F006E46A2 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		E02BB762126CC1E0006E46A2 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
+		E6FE48E81406EA3C00A0CF40 /* RateMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; path = RateMenu.h; sourceTree = "<group>"; };
+		E6FE48E91406EA3C00A0CF40 /* RateMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RateMenu.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -590,6 +593,8 @@
 			children = (
 				026E708513F5DEC000809EEF /* MainMenu.h */,
 				026E708613F5DEC000809EEF /* MainMenu.m */,
+				E6FE48E81406EA3C00A0CF40 /* RateMenu.h */,
+				E6FE48E91406EA3C00A0CF40 /* RateMenu.m */,
 			);
 			name = Menus;
 			path = src/Menus;
@@ -1262,6 +1267,7 @@
 				026E708713F5DEC000809EEF /* MainMenu.m in Sources */,
 				022327E213F7F53700DA78D6 /* XSimpleSkinManager.m in Sources */,
 				022328D513F82B4700DA78D6 /* XMenuButton.m in Sources */,
+				E6FE48EA1406EA3C00A0CF40 /* RateMenu.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
