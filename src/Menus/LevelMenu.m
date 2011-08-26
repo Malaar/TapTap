@@ -251,7 +251,8 @@
 //==============================================================================
 - (void) backButtonPressed
 {
-	[[CCDirector sharedDirector] replaceScene:[MainMenu scene]];
+	CCScene* scene = [CCTransitionFade transitionWithDuration:1.5 scene:[MainMenu scene] withColor:ccc3(0, 0, 0)];
+	[[CCDirector sharedDirector] replaceScene:scene];
 }
 
 //==============================================================================
