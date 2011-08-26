@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		022327E213F7F53700DA78D6 /* XSimpleSkinManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 022327E113F7F53700DA78D6 /* XSimpleSkinManager.m */; };
 		022328D513F82B4700DA78D6 /* XMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 022328D413F82B4700DA78D6 /* XMenuButton.m */; };
-		0231881F13AD041500B0414A /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 0231881913AD041500B0414A /* assets */; };
+		0232C094140835C100E857B7 /* CocoaExtentions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0232C093140835C100E857B7 /* CocoaExtentions.m */; };
+		0232C145140849C900E857B7 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 0232C122140849C900E857B7 /* assets */; };
 		0259789D13F46F1500518A9C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0259789B13F46F1500518A9C /* main.m */; };
 		025978B913F46F4D00518A9C /* XHighlightedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 025978A113F46F4D00518A9C /* XHighlightedButton.m */; };
 		025978BA13F46F4D00518A9C /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 025978A413F46F4D00518A9C /* GameScene.m */; };
@@ -225,7 +226,7 @@
 		026E704A13F5DA2E00809EEF /* XTargetedAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 026E704913F5DA2E00809EEF /* XTargetedAction.m */; };
 		026E708713F5DEC000809EEF /* MainMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 026E708613F5DEC000809EEF /* MainMenu.m */; };
 		0277822414010A310043B0AF /* XSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 0277822314010A310043B0AF /* XSettings.m */; };
-		0293562213FC876A00568C1B /* SelectLevelMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 0293562113FC876A00568C1B /* SelectLevelMenu.m */; };
+		0293562213FC876A00568C1B /* LevelMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 0293562113FC876A00568C1B /* LevelMenu.m */; };
 		02EDE36813FC6C0C007A9EDB /* XLayerViewed.m in Sources */ = {isa = PBXBuildFile; fileRef = 02EDE36713FC6C0C007A9EDB /* XLayerViewed.m */; };
 		02EDE36C13FC7089007A9EDB /* XScrollPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 02EDE36B13FC7089007A9EDB /* XScrollPanel.m */; };
 		505574581045D68500A31725 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506EDBA4102F4C9F00A389B3 /* AVFoundation.framework */; };
@@ -272,7 +273,9 @@
 		022327EE13F81A3B00DA78D6 /* XDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDefines.h; sourceTree = "<group>"; };
 		022328D313F82B4700DA78D6 /* XMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMenuButton.h; sourceTree = "<group>"; };
 		022328D413F82B4700DA78D6 /* XMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMenuButton.m; sourceTree = "<group>"; };
-		0231881913AD041500B0414A /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
+		0232C092140835C100E857B7 /* CocoaExtentions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CocoaExtentions.h; path = src/XCocosKit/XExtentions/CocoaExtentions.h; sourceTree = SOURCE_ROOT; };
+		0232C093140835C100E857B7 /* CocoaExtentions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CocoaExtentions.m; path = src/XCocosKit/XExtentions/CocoaExtentions.m; sourceTree = SOURCE_ROOT; };
+		0232C122140849C900E857B7 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = assets; path = Resources/assets; sourceTree = SOURCE_ROOT; };
 		0259789B13F46F1500518A9C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = src/main.m; sourceTree = SOURCE_ROOT; };
 		025978A013F46F4D00518A9C /* XHighlightedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XHighlightedButton.h; path = src/Controls/XHighlightedButton.h; sourceTree = SOURCE_ROOT; };
 		025978A113F46F4D00518A9C /* XHighlightedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XHighlightedButton.m; path = src/Controls/XHighlightedButton.m; sourceTree = SOURCE_ROOT; };
@@ -505,8 +508,8 @@
 		026E708613F5DEC000809EEF /* MainMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenu.m; sourceTree = "<group>"; };
 		0277822214010A310043B0AF /* XSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSettings.h; sourceTree = "<group>"; };
 		0277822314010A310043B0AF /* XSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSettings.m; sourceTree = "<group>"; };
-		0293562013FC876A00568C1B /* SelectLevelMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectLevelMenu.h; sourceTree = "<group>"; };
-		0293562113FC876A00568C1B /* SelectLevelMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectLevelMenu.m; sourceTree = "<group>"; };
+		0293562013FC876A00568C1B /* LevelMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelMenu.h; sourceTree = "<group>"; };
+		0293562113FC876A00568C1B /* LevelMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelMenu.m; sourceTree = "<group>"; };
 		02EDE36613FC6C0C007A9EDB /* XLayerViewed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLayerViewed.h; sourceTree = "<group>"; };
 		02EDE36713FC6C0C007A9EDB /* XLayerViewed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLayerViewed.m; sourceTree = "<group>"; };
 		02EDE36A13FC7089007A9EDB /* XScrollPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XScrollPanel.h; sourceTree = "<group>"; };
@@ -602,8 +605,8 @@
 			children = (
 				026E708513F5DEC000809EEF /* MainMenu.h */,
 				026E708613F5DEC000809EEF /* MainMenu.m */,
-				0293562013FC876A00568C1B /* SelectLevelMenu.h */,
-				0293562113FC876A00568C1B /* SelectLevelMenu.m */,
+				0293562013FC876A00568C1B /* LevelMenu.h */,
+				0293562113FC876A00568C1B /* LevelMenu.m */,
 			);
 			name = Menus;
 			path = src/Menus;
@@ -656,6 +659,8 @@
 		025978B313F46F4D00518A9C /* XExtentions */ = {
 			isa = PBXGroup;
 			children = (
+				0232C092140835C100E857B7 /* CocoaExtentions.h */,
+				0232C093140835C100E857B7 /* CocoaExtentions.m */,
 				025978B413F46F4D00518A9C /* XCocosExtensions.h */,
 				025978B513F46F4D00518A9C /* XCocosExtensions.m */,
 			);
@@ -1047,7 +1052,7 @@
 		50F414EB1069373D002A0D5E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				0231881913AD041500B0414A /* assets */,
+				0232C122140849C900E857B7 /* assets */,
 				E02BB762126CC1E0006E46A2 /* iTunesArtwork */,
 				E02BB4FE126CA50F006E46A2 /* Icon@2x.png */,
 				E02BB4FF126CA50F006E46A2 /* Icon-Small@2x.png */,
@@ -1258,7 +1263,7 @@
 				E02BB507126CA50F006E46A2 /* Icon-Small-50.png in Resources */,
 				E02BB508126CA50F006E46A2 /* Icon-72.png in Resources */,
 				E02BB763126CC1E0006E46A2 /* iTunesArtwork in Resources */,
-				0231881F13AD041500B0414A /* assets in Resources */,
+				0232C145140849C900E857B7 /* assets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1284,8 +1289,9 @@
 				022328D513F82B4700DA78D6 /* XMenuButton.m in Sources */,
 				02EDE36813FC6C0C007A9EDB /* XLayerViewed.m in Sources */,
 				02EDE36C13FC7089007A9EDB /* XScrollPanel.m in Sources */,
-				0293562213FC876A00568C1B /* SelectLevelMenu.m in Sources */,
+				0293562213FC876A00568C1B /* LevelMenu.m in Sources */,
 				0277822414010A310043B0AF /* XSettings.m in Sources */,
+				0232C094140835C100E857B7 /* CocoaExtentions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

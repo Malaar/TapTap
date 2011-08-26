@@ -17,6 +17,7 @@
 
 	NSString* currentSkinName;
 	NSString* currentSkinPath;
+	NSString* currentSkinPathLocal;
 }
 
 @property (nonatomic, readonly) NSString* baseSkinPath;
@@ -26,5 +27,6 @@
 - (void) switchToSkin:(NSString*) aSkinName;
 
 - (NSString*) pathToCurrentSkin:(NSString*) aPathToConvert;
+- (NSString*) localPathToCurrentSkin:(NSString*) aPathToConvert;
 
 @end

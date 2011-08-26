@@ -19,10 +19,12 @@
 	if( (self = [super init]) )
 	{
 		// create primeView - parent view for any additional views shows in this layer
-		CGRect frame = CGRectMake(0, 0, 480, 320);
+		CGSize screenSize = [UIScreen mainScreen].bounds.size;
+		CGRect frame = CGRectMake(0, 0, screenSize.height, screenSize.width);
 		primeView = [[UIView alloc] initWithFrame:frame];
 		primeView.backgroundColor = [UIColor clearColor];
 		primeView.hidden = YES;
+		primeView.userInteractionEnabled = NO;
 		[[CCDirector sharedDirector].openGLView addSubview:primeView];
 		[primeView release];
 	}

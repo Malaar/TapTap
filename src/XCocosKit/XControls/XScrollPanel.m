@@ -22,9 +22,9 @@
 	if( (self = [super init]) )
 	{
 		// temporarry
-		baseView = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+		baseView = [UIButton buttonWithType:UIButtonTypeCustom];
 		[baseView retain];
-		baseView.frame = CGRectMake(0, 0, 140, 110);
+		baseView.frame = CGRectZero; //CGRectMake(0, 0, 100, 100);
 	}
 	
 	return self;
@@ -69,7 +69,7 @@
 	{
 		scrollView = [[UIScrollView alloc] initWithFrame:aFrame];
 		scrollView.delegate = self;
-		scrollView.backgroundColor = [UIColor redColor];
+		scrollView.backgroundColor = [UIColor clearColor];
 		scrollView.showsHorizontalScrollIndicator = NO;
 		scrollView.showsVerticalScrollIndicator = NO;
 		

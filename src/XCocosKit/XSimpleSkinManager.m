@@ -48,6 +48,7 @@ XSimpleSkinManager* instance = nil;
 		skins = nil;
 		currentSkinName = nil;
 		currentSkinPath = nil;
+		currentSkinPathLocal = nil;
 		
 		// load skins config
 		if( ![self loadConfig] )
@@ -67,6 +68,7 @@ XSimpleSkinManager* instance = nil;
 	[baseSkinPath release];
 	[currentSkinName release];
 	[currentSkinPath release];
+	[currentSkinPathLocal release];
 	
 	[super dealloc];
 }
@@ -100,8 +102,9 @@ XSimpleSkinManager* instance = nil;
 		currentSkinName = [aSkinName copy];
 		NSString* path = [skins objectForKey:currentSkinName];
 		XInClassAssert(path, @"Wrong skin name !!!");
-		NSAssert(path, @"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 		path = [baseSkinPath stringByAppendingPathComponent:path];
+		[currentSkinPathLocal release];
+		currentSkinPathLocal = [path retain];
 		path = [[NSBundle mainBundle] pathForResource:path ofType:nil];
 		[currentSkinPath release];
 		currentSkinPath = [path retain];
@@ -112,9 +115,16 @@ XSimpleSkinManager* instance = nil;
 - (NSString*) pathToCurrentSkin:(NSString*) aPathToConvert
 {
 	XInClassAssert(currentSkinPath, @"Try to convert path with nil skin path !!!");
-//	NSAssert( currentSkinPath, ([NSString stringWithFormat:@"[%@ - %@] : %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), @"Try to convert path with nil skin path !!!"]) );
 
 	return [currentSkinPath stringByAppendingPathComponent:aPathToConvert];
+}
+
+//==============================================================================
+- (NSString*) localPathToCurrentSkin:(NSString*) aPathToConvert
+{
+	XInClassAssert(currentSkinPathLocal, @"Try to convert path with nil local skin path !!!");
+	
+	return [currentSkinPathLocal stringByAppendingPathComponent:aPathToConvert];
 }
 
 //==============================================================================

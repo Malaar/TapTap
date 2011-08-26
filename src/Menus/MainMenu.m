@@ -11,7 +11,7 @@
 #import "XSimpleSkinManager.h"
 #import "XSettings.h"
 
-#import "SelectLevelMenu.h"
+#import "LevelMenu.h"
 
 
 //==============================================================================
@@ -187,7 +187,7 @@
 //==============================================================================
 - (void) helpButtonPressed
 {
-	[[CCDirector sharedDirector] replaceScene:[SelectLevelMenu scene]];
+	[[CCDirector sharedDirector] replaceScene:[LevelMenu scene]];
 }
 
 //==============================================================================
