@@ -10,6 +10,7 @@
 #import "GameScene.h"
 #import "XSimpleSkinManager.h"
 #import "XSettings.h"
+#import "RateMenu.h"
 
 #import "LevelMenu.h"
 
@@ -203,6 +204,7 @@
 //==============================================================================
 - (void) rateItButtonPressed
 {
+    [[CCDirector sharedDirector] pushScene:[RateMenu scene]];
 }
 
 //==============================================================================

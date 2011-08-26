@@ -255,6 +255,7 @@
 		E02BB507126CA50F006E46A2 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = E02BB501126CA50F006E46A2 /* Icon-Small-50.png */; };
 		E02BB508126CA50F006E46A2 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = E02BB502126CA50F006E46A2 /* Icon-72.png */; };
 		E02BB763126CC1E0006E46A2 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = E02BB762126CC1E0006E46A2 /* iTunesArtwork */; };
+		E6FE48EA1406EA3C00A0CF40 /* RateMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = E6FE48E91406EA3C00A0CF40 /* RateMenu.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -535,6 +536,8 @@
 		E02BB501126CA50F006E46A2 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
 		E02BB502126CA50F006E46A2 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		E02BB762126CC1E0006E46A2 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
+		E6FE48E81406EA3C00A0CF40 /* RateMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RateMenu.h; sourceTree = "<group>"; };
+		E6FE48E91406EA3C00A0CF40 /* RateMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RateMenu.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -607,6 +610,8 @@
 				026E708613F5DEC000809EEF /* MainMenu.m */,
 				0293562013FC876A00568C1B /* LevelMenu.h */,
 				0293562113FC876A00568C1B /* LevelMenu.m */,
+				E6FE48E81406EA3C00A0CF40 /* RateMenu.h */,
+				E6FE48E91406EA3C00A0CF40 /* RateMenu.m */,
 			);
 			name = Menus;
 			path = src/Menus;
@@ -1292,6 +1297,7 @@
 				0293562213FC876A00568C1B /* LevelMenu.m in Sources */,
 				0277822414010A310043B0AF /* XSettings.m in Sources */,
 				0232C094140835C100E857B7 /* CocoaExtentions.m in Sources */,
+				E6FE48EA1406EA3C00A0CF40 /* RateMenu.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

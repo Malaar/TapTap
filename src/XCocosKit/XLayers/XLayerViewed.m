@@ -24,7 +24,6 @@
 		primeView = [[UIView alloc] initWithFrame:frame];
 		primeView.backgroundColor = [UIColor clearColor];
 		primeView.hidden = YES;
-		primeView.userInteractionEnabled = NO;
 		[[CCDirector sharedDirector].openGLView addSubview:primeView];
 		[primeView release];
 	}
