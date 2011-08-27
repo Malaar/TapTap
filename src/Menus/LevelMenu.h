@@ -38,7 +38,7 @@
 //==============================================================================
 //==============================================================================
 ///
-@interface LevelMenu : XLayerViewed <XScrollPanelDelegate>
+@interface LevelMenu : XLayer <XScrollPanelDelegate>
 {
 
 }

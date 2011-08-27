@@ -188,7 +188,8 @@
 //==============================================================================
 - (void) helpButtonPressed
 {
-	[[CCDirector sharedDirector] replaceScene:[LevelMenu scene]];
+	CCScene* scene = [CCTransitionFade transitionWithDuration:0.25 scene:[LevelMenu scene] withColor:ccc3(0, 0, 0)];
+	[[CCDirector sharedDirector] replaceScene:scene];
 }
 
 //==============================================================================

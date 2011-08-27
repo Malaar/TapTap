@@ -227,6 +227,7 @@
 		026E708713F5DEC000809EEF /* MainMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 026E708613F5DEC000809EEF /* MainMenu.m */; };
 		0277822414010A310043B0AF /* XSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 0277822314010A310043B0AF /* XSettings.m */; };
 		0293562213FC876A00568C1B /* LevelMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 0293562113FC876A00568C1B /* LevelMenu.m */; };
+		02C496C814093AD1008C3691 /* CCScrollLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C496C714093AD1008C3691 /* CCScrollLayer.m */; };
 		02EDE36813FC6C0C007A9EDB /* XLayerViewed.m in Sources */ = {isa = PBXBuildFile; fileRef = 02EDE36713FC6C0C007A9EDB /* XLayerViewed.m */; };
 		02EDE36C13FC7089007A9EDB /* XScrollPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 02EDE36B13FC7089007A9EDB /* XScrollPanel.m */; };
 		505574581045D68500A31725 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506EDBA4102F4C9F00A389B3 /* AVFoundation.framework */; };
@@ -514,6 +515,8 @@
 		0277822314010A310043B0AF /* XSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSettings.m; sourceTree = "<group>"; };
 		0293562013FC876A00568C1B /* LevelMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelMenu.h; sourceTree = "<group>"; };
 		0293562113FC876A00568C1B /* LevelMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelMenu.m; sourceTree = "<group>"; };
+		02C496C614093AD1008C3691 /* CCScrollLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCScrollLayer.h; path = "src/libs/givp-Cocos2d-Menu-Scroller-003053e/CCScrollLayer.h"; sourceTree = SOURCE_ROOT; };
+		02C496C714093AD1008C3691 /* CCScrollLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCScrollLayer.m; path = "src/libs/givp-Cocos2d-Menu-Scroller-003053e/CCScrollLayer.m"; sourceTree = SOURCE_ROOT; };
 		02EDE36613FC6C0C007A9EDB /* XLayerViewed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLayerViewed.h; sourceTree = "<group>"; };
 		02EDE36713FC6C0C007A9EDB /* XLayerViewed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLayerViewed.m; sourceTree = "<group>"; };
 		02EDE36A13FC7089007A9EDB /* XScrollPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XScrollPanel.h; sourceTree = "<group>"; };
@@ -543,7 +546,7 @@
 		E62B126C14086E4F001EAF57 /* MUAutoresizeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUAutoresizeButton.m; sourceTree = "<group>"; };
 		E62B126D14086E4F001EAF57 /* MUToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUToolbar.h; sourceTree = "<group>"; };
 		E62B126E14086E4F001EAF57 /* MUToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUToolbar.m; sourceTree = "<group>"; };
-		E62B127314086F2B001EAF57 /* XWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; name = XWebView.h; path = XWebView/XWebView.h; sourceTree = "<group>"; };
+		E62B127314086F2B001EAF57 /* XWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XWebView.h; path = XWebView/XWebView.h; sourceTree = "<group>"; };
 		E62B127414086F2B001EAF57 /* XWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XWebView.m; path = XWebView/XWebView.m; sourceTree = "<group>"; };
 		E6FE48E81406EA3C00A0CF40 /* RateMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RateMenu.h; sourceTree = "<group>"; };
 		E6FE48E91406EA3C00A0CF40 /* RateMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RateMenu.m; sourceTree = "<group>"; };
@@ -698,6 +701,7 @@
 		025978C113F46F6800518A9C /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				02C496C514093AD1008C3691 /* givp-Cocos2d-Menu-Scroller-003053e */,
 				025978C213F46F6800518A9C /* cocos2d */,
 				0259796B13F46F6800518A9C /* CocosDenshion */,
 				0259797513F46F6800518A9C /* cocoslive */,
@@ -1006,6 +1010,16 @@
 			);
 			name = JSON;
 			path = src/libs/TouchJSON/JSON;
+			sourceTree = SOURCE_ROOT;
+		};
+		02C496C514093AD1008C3691 /* givp-Cocos2d-Menu-Scroller-003053e */ = {
+			isa = PBXGroup;
+			children = (
+				02C496C614093AD1008C3691 /* CCScrollLayer.h */,
+				02C496C714093AD1008C3691 /* CCScrollLayer.m */,
+			);
+			name = "givp-Cocos2d-Menu-Scroller-003053e";
+			path = "src/libs/givp-Cocos2d-Menu-Scroller-003053e";
 			sourceTree = SOURCE_ROOT;
 		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
@@ -1333,6 +1347,7 @@
 				E62B126F14086E4F001EAF57 /* MUAutoresizeButton.m in Sources */,
 				E62B127014086E4F001EAF57 /* MUToolbar.m in Sources */,
 				E62B127514086F2B001EAF57 /* XWebView.m in Sources */,
+				02C496C814093AD1008C3691 /* CCScrollLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

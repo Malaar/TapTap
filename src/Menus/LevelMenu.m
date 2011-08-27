@@ -11,6 +11,7 @@
 #import "CocoaExtentions.h"
 #import "XSimpleSkinManager.h"
 
+#import "CCScrollLayer.h"
 
 //==============================================================================
 //==============================================================================
@@ -129,6 +130,7 @@
 {
 	if( (self = [super init]) )
 	{
+		/*
 		CGSize screenSize = [UIScreen mainScreen].bounds.size;
 		
 		//
@@ -162,6 +164,7 @@
 		frame = primeView.frame;
 		frame.size.height -= 60;
 		primeView.frame = frame;
+		//*/
 		
 		/*
 		// back button
@@ -223,6 +226,34 @@
 	[self addChild:bg];
 	bg.anchorPoint = ccp(0.0f, 0.0f);
 	bg.position = ccp(0.0f, 0.0f);
+	
+	CGSize screenSize = [CCDirector sharedDirector].winSize;
+	
+	// page
+	CCLayer* pg1 = [CCLayer node];
+	CCLabelTTF* lb1 = [CCLabelTTF labelWithString:@"Page 1" fontName:@"Helvetica" fontSize:36];
+	[pg1 addChild:lb1];
+	lb1.position = ccp(screenSize.width / 2, screenSize.height / 2);
+	
+	// page
+	CCLayer* pg2 = [CCLayer node];
+	CCLabelTTF* lb2 = [CCLabelTTF labelWithString:@"Page 2" fontName:@"Helvetica" fontSize:36];
+	[pg2 addChild:lb2];
+	lb2.position = ccp(screenSize.width / 2, screenSize.height / 2);
+	
+	// page
+	CCLayer* pg3 = [CCLayer node];
+	CCLabelTTF* lb3 = [CCLabelTTF labelWithString:@"Page 3" fontName:@"Helvetica" fontSize:36];
+	[pg3 addChild:lb3];
+	lb3.position = ccp(screenSize.width / 2, screenSize.height / 2);
+	
+	
+	NSArray* layers = [NSArray arrayWithObjects: pg1, pg2, pg3, nil];
+	CCScrollLayer* sl = [CCScrollLayer nodeWithLayers:layers widthOffset:200];
+	[self addChild: sl];
+	sl.showPagesIndicator = YES;
+	sl.minimumTouchLengthToSlide = 1;
+	sl.minimumTouchLengthToChangePage = 20;
 }
 
 //==============================================================================
@@ -251,7 +282,7 @@
 //==============================================================================
 - (void) backButtonPressed
 {
-	CCScene* scene = [CCTransitionFade transitionWithDuration:1.5 scene:[MainMenu scene] withColor:ccc3(0, 0, 0)];
+	CCScene* scene = [CCTransitionFade transitionWithDuration:0.25 scene:[MainMenu scene] withColor:ccc3(0, 0, 0)];
 	[[CCDirector sharedDirector] replaceScene:scene];
 }
 
