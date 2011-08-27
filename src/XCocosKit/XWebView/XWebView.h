@@ -17,7 +17,10 @@
     
     UIBarButtonItem *toGameBarButton, *backBarButton, *forwardBarButton, *refreshStopBarButton, *flexSpace, *fixedSpace;
     
+    NSString* urlString;
+    
     BOOL stoppedLoading;
+    BOOL firstLoad;
 }
 
 - (id)initWithURLString:(NSString*)aUrlString;

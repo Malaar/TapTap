@@ -51,6 +51,9 @@
     {
         self.backgroundColor = [UIColor clearColor];
         self.exclusiveTouch = YES;
+        
+        firstLoad = NO;
+        
         // bottom toolbar
         bottomToolbar = [self createBottomToolbar];
         [self addSubview:bottomToolbar];
@@ -69,7 +72,7 @@
         webView.delegate = self;
         webView.scalesPageToFit = YES;
         webView.backgroundColor= [UIColor clearColor];    
-        [[webView.subviews objectAtIndex:0] setBackgroundColor:[UIColor clearColor]];
+        [[webView.subviews objectAtIndex:0] setBackgroundColor:[UIColor grayColor]];
         [self addSubview:webView];
         
         // activiti view
@@ -91,13 +94,19 @@
     [forwardBarButton release];
     [flexSpace release];
     [fixedSpace release];
+    
+    [urlString release];
+    
     [super dealloc];
 }
 
 //==============================================================================
 - (void) loadUrlByString:(NSString*)aUrlString
 {
-    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:aUrlString]]];
+    if (urlString)
+        [urlString release];
+    urlString = [aUrlString retain];
+    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlString]]];
 }
 
 #pragma mark - Bottom Toolbar
@@ -189,7 +198,10 @@
 //==============================================================================
 - (void) refreshButtonPressed:(UIBarButtonItem*)sender
 {
-    [webView reload];
+    if (!firstLoad)
+        [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlString]]];
+    else
+        [webView reload];
 }
 
 //==============================================================================
@@ -213,6 +225,7 @@
 //==============================================================================
 - (void) webViewDidFinishLoad:(UIWebView *)webView
 {
+    firstLoad = YES;
     [activityIndicator stopAnimating];
     [self updateButtonToolBar];
 }
