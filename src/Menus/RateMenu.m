@@ -66,7 +66,7 @@
 											 selectedSprite:selectedSprite
 													 target:self
 												   selector:@selector(backButtonPressed)];
-	btBack.position = ccp(0, 50);
+	btBack.position = ccp(-100, -30);
 	lbCaption = [CCLabelBMFont labelWithString:@"Back" fntFile:@"assets/Fonts/button_font.fnt"];
 	[btBack setCaption:lbCaption];
     
@@ -77,12 +77,20 @@
 												selectedSprite:selectedSprite
 												  	    target:self
 													  selector:@selector(rateButtonPressed)];
-	btRate.position = ccp(0, -50);
+	btRate.position = ccp(100, -30);
 	lbCaption = [CCLabelBMFont labelWithString:@"Rate" fntFile:@"assets/Fonts/button_font.fnt"];
 	[btRate setCaption:lbCaption];
     
+    
+    lbCaption = [CCLabelBMFont labelWithString:@"Bla-Bla-Bla-Bla-Bla" fntFile:@"assets/Fonts/button_font.fnt"];
+    
+    // Label
+    CCMenuItemLabel *lbMenu = [CCMenuItemLabel itemWithLabel:lbCaption target:nil selector:nil];
+    lbMenu.position = ccp(0, 30);
+    
+    
     // menu
-	CCMenu* menu = [CCMenu menuWithItems:btBack, btRate, nil];
+	CCMenu* menu = [CCMenu menuWithItems: lbMenu, btBack, btRate, nil];
 	[self addChild:menu];
 
 }

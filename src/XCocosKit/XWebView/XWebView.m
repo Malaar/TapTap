@@ -72,7 +72,7 @@
         webView.delegate = self;
         webView.scalesPageToFit = YES;
         webView.backgroundColor= [UIColor clearColor];    
-        [[webView.subviews objectAtIndex:0] setBackgroundColor:[UIColor grayColor]];
+        [[webView.subviews objectAtIndex:0] setBackgroundColor:[UIColor colorWithRed:187/255.f green:216/255.f blue:248/255.f alpha:1.f]];
         [self addSubview:webView];
         
         // activiti view
