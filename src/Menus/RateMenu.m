@@ -8,6 +8,7 @@
 
 #import "RateMenu.h"
 #import "XSimpleSkinManager.h"
+#import "XWebView.h"
 
 
 //==============================================================================
@@ -95,6 +96,13 @@
 //==============================================================================
 - (void) rateButtonPressed
 {
+    //XWebView* webView = [[XWebView alloc] initWithFrame:CGRectMake(0, 0, 480, 320)];
+    //[webView loadUrlByString:@"http://www.cocos2d-iphone.org/"];
+    
+    XWebView* webView = [[[XWebView alloc] initWithURLString:@"http://www.cocos2d-iphone.org/"] autorelease];
+    
+    [[[CCDirector sharedDirector] openGLView] addSubview:webView];
+    [[[CCDirector sharedDirector] openGLView] setMultipleTouchEnabled:YES];
 }
 
 //==============================================================================

@@ -255,6 +255,9 @@
 		E02BB507126CA50F006E46A2 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = E02BB501126CA50F006E46A2 /* Icon-Small-50.png */; };
 		E02BB508126CA50F006E46A2 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = E02BB502126CA50F006E46A2 /* Icon-72.png */; };
 		E02BB763126CC1E0006E46A2 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = E02BB762126CC1E0006E46A2 /* iTunesArtwork */; };
+		E62B126F14086E4F001EAF57 /* MUAutoresizeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E62B126C14086E4F001EAF57 /* MUAutoresizeButton.m */; };
+		E62B127014086E4F001EAF57 /* MUToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = E62B126E14086E4F001EAF57 /* MUToolbar.m */; };
+		E62B127514086F2B001EAF57 /* XWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = E62B127414086F2B001EAF57 /* XWebView.m */; };
 		E6FE48EA1406EA3C00A0CF40 /* RateMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = E6FE48E91406EA3C00A0CF40 /* RateMenu.m */; };
 /* End PBXBuildFile section */
 
@@ -536,6 +539,12 @@
 		E02BB501126CA50F006E46A2 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
 		E02BB502126CA50F006E46A2 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		E02BB762126CC1E0006E46A2 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
+		E62B126B14086E4F001EAF57 /* MUAutoresizeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUAutoresizeButton.h; sourceTree = "<group>"; };
+		E62B126C14086E4F001EAF57 /* MUAutoresizeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUAutoresizeButton.m; sourceTree = "<group>"; };
+		E62B126D14086E4F001EAF57 /* MUToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUToolbar.h; sourceTree = "<group>"; };
+		E62B126E14086E4F001EAF57 /* MUToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUToolbar.m; sourceTree = "<group>"; };
+		E62B127314086F2B001EAF57 /* XWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; name = XWebView.h; path = XWebView/XWebView.h; sourceTree = "<group>"; };
+		E62B127414086F2B001EAF57 /* XWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XWebView.m; path = XWebView/XWebView.m; sourceTree = "<group>"; };
 		E6FE48E81406EA3C00A0CF40 /* RateMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RateMenu.h; sourceTree = "<group>"; };
 		E6FE48E91406EA3C00A0CF40 /* RateMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RateMenu.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -637,6 +646,7 @@
 				025978AF13F46F4D00518A9C /* XControls */,
 				025978B313F46F4D00518A9C /* XExtentions */,
 				025978B613F46F4D00518A9C /* XLayers */,
+				E62B127214086ED2001EAF57 /* XWebView */,
 				022327E013F7F53700DA78D6 /* XSimpleSkinManager.h */,
 				022327E113F7F53700DA78D6 /* XSimpleSkinManager.m */,
 			);
@@ -1012,6 +1022,7 @@
 			children = (
 				025978C113F46F6800518A9C /* libs */,
 				025978AE13F46F4D00518A9C /* XCocosKit */,
+				E62B126A14086E4F001EAF57 /* MUKit */,
 				0259789E13F46F4D00518A9C /* Base */,
 				0259789F13F46F4D00518A9C /* Controls */,
 				025978A213F46F4D00518A9C /* GameScene */,
@@ -1070,6 +1081,27 @@
 				50F414EF1069373D002A0D5E /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		E62B126A14086E4F001EAF57 /* MUKit */ = {
+			isa = PBXGroup;
+			children = (
+				E62B126B14086E4F001EAF57 /* MUAutoresizeButton.h */,
+				E62B126C14086E4F001EAF57 /* MUAutoresizeButton.m */,
+				E62B126D14086E4F001EAF57 /* MUToolbar.h */,
+				E62B126E14086E4F001EAF57 /* MUToolbar.m */,
+			);
+			name = MUKit;
+			path = src/MUKit;
+			sourceTree = SOURCE_ROOT;
+		};
+		E62B127214086ED2001EAF57 /* XWebView */ = {
+			isa = PBXGroup;
+			children = (
+				E62B127314086F2B001EAF57 /* XWebView.h */,
+				E62B127414086F2B001EAF57 /* XWebView.m */,
+			);
+			name = XWebView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1298,6 +1330,9 @@
 				0277822414010A310043B0AF /* XSettings.m in Sources */,
 				0232C094140835C100E857B7 /* CocoaExtentions.m in Sources */,
 				E6FE48EA1406EA3C00A0CF40 /* RateMenu.m in Sources */,
+				E62B126F14086E4F001EAF57 /* MUAutoresizeButton.m in Sources */,
+				E62B127014086E4F001EAF57 /* MUToolbar.m in Sources */,
+				E62B127514086F2B001EAF57 /* XWebView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
