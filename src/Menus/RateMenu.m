@@ -9,7 +9,8 @@
 #import "RateMenu.h"
 #import "XSimpleSkinManager.h"
 #import "XWebView.h"
-
+#import "SHKFacebook.h"
+#import "SHKTwitter.h"
 
 //==============================================================================
 //==============================================================================
@@ -18,6 +19,8 @@
 
 - (void) backButtonPressed;
 - (void) rateButtonPressed;
+- (void) faceBookButtonPressed;
+- (void) twitterButtonPressed;
 
 @end
 
@@ -88,9 +91,21 @@
     CCMenuItemLabel *lbMenu = [CCMenuItemLabel itemWithLabel:lbCaption target:nil selector:nil];
     lbMenu.position = ccp(0, 30);
     
+	XMenuButton* faceBookButton = [XMenuButton itemFromNormalSprite:[CCSprite spriteWithSpriteFrameName:@"facebookButtonNormal.png"]
+                                                     selectedSprite:[CCSprite spriteWithSpriteFrameName:@"facebookButtonPressed.png"]
+                                                             target:self
+                                                           selector:@selector(faceBookButtonPressed)];
+	faceBookButton.position = ccp(-200, 130);
+    
+	XMenuButton* twitterButton = [XMenuButton itemFromNormalSprite:[CCSprite spriteWithSpriteFrameName:@"twitterButtonNormal.png"]
+                                                    selectedSprite:[CCSprite spriteWithSpriteFrameName:@"twitterButtonPressed.png"]
+                                                            target:self
+                                                          selector:@selector(twitterButtonPressed)];
+	twitterButton.position = ccp(-200, 90);
+    
     
     // menu
-	CCMenu* menu = [CCMenu menuWithItems: lbMenu, btBack, btRate, nil];
+	CCMenu* menu = [CCMenu menuWithItems: lbMenu, btBack, btRate, faceBookButton, twitterButton, nil];
 	[self addChild:menu];
 
 }
@@ -111,6 +126,23 @@
     
     [[[CCDirector sharedDirector] openGLView] addSubview:webView];
     [[[CCDirector sharedDirector] openGLView] setMultipleTouchEnabled:YES];
+}
+
+//==============================================================================
+- (void) faceBookButtonPressed
+{
+    SHKItem* textItem = [SHKItem text: @"Test sharing"];
+    //[[SHKFacebook alloc]ini shareItem:textItem];
+    
+    SHKFacebook *face = [[SHKFacebook alloc] init];//[[UIApplication sharedApplication] delegate] window] ];
+    face.item = textItem;
+    [face share];
+}
+//==============================================================================
+- (void) twitterButtonPressed
+{
+    SHKItem* textItem = [SHKItem text: @"Test sharing"];
+    [SHKTwitter shareItem:textItem];
 }
 
 //==============================================================================
