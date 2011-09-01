@@ -51,9 +51,10 @@
 		
 		self.delegate = d;
 		
-		self.webView = [[UIWebView alloc] initWithFrame:CGRectZero];
+		self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 320, 460)];
 		webView.delegate = self;
 		webView.scalesPageToFit = YES;
+        webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 		webView.dataDetectorTypes = UIDataDetectorTypeNone;
 		[webView release];
 		
@@ -151,7 +152,7 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation 
 {
-    return YES;
+    return (UIDeviceOrientationIsLandscape(interfaceOrientation));
 }
 
 - (void)cancel

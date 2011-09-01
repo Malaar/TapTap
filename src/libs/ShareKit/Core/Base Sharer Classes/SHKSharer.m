@@ -664,7 +664,7 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation 
 {
-    return YES;
+    return (UIDeviceOrientationIsLandscape(interfaceOrientation));
 }
 
 - (void)viewDidDisappear:(BOOL)animated

@@ -345,7 +345,7 @@ static CGFloat kBorderWidth = 10;
       | UIViewAutoresizingFlexibleBottomMargin;
     [self addSubview:_titleLabel];
         
-    _webView = [[UIWebView alloc] initWithFrame:CGRectZero];
+    _webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 320, 460)];
     _webView.delegate = self;
     _webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     _webView.autoresizesSubviews = YES;

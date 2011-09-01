@@ -104,7 +104,7 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation 
 {
-    return YES;
+    return (UIDeviceOrientationIsLandscape(interfaceOrientation));
 }
 
 - (void)keyboardWillShow:(NSNotification *)notification
