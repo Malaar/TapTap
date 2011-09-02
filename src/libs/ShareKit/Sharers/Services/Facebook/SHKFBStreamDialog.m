@@ -34,6 +34,9 @@
 		
 		// Make the text field bigger
 		[_webView stringByEvaluatingJavaScriptFromString:@"document.getElementsByName('feedform_user_message')[0].style.height='100px'"];
+        
+		// disable edit for this fucking message
+		[_webView stringByEvaluatingJavaScriptFromString:@"document.getElementsByName('feedform_user_message')[0].disabled='true'"];
 	}
 }
 

@@ -75,6 +75,7 @@
 	textView.contentInset = UIEdgeInsetsMake(5,5,0,0);
 	textView.backgroundColor = [UIColor whiteColor];	
 	textView.autoresizesSubviews = YES;
+    textView.userInteractionEnabled = NO;
 	textView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 	
 	[self.view addSubview:textView];
@@ -83,22 +84,24 @@
 - (void)viewDidAppear:(BOOL)animated
 {
 	[super viewDidAppear:animated];	
-	
-	NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
-	[nc addObserver:self selector:@selector(keyboardWillShow:) name: UIKeyboardWillShowNotification object:nil];
-	
-	[self.textView becomeFirstResponder];
+
+//  TAPTAP
+//	NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+//	[nc addObserver:self selector:@selector(keyboardWillShow:) name: UIKeyboardWillShowNotification object:nil];
+//	
+//	[self.textView becomeFirstResponder];
 }
 
 - (void)viewDidDisappear:(BOOL)animated
 {
 	[super viewDidDisappear:animated];	
-	
-	// Remove observers
-	NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
-	[nc removeObserver:self name: UIKeyboardWillShowNotification object:nil];
-	
-	// Remove the SHK view wrapper from the window
+
+//  TAPTAP	
+//	// Remove observers
+//	NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+//	[nc removeObserver:self name: UIKeyboardWillShowNotification object:nil];
+//	
+//	// Remove the SHK view wrapper from the window
 	[[SHK currentHelper] viewWasDismissed];
 }
 
