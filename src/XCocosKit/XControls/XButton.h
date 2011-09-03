@@ -39,6 +39,7 @@
 	XTargetedAction* targetedAction;
 }
 
+@property (nonatomic, assign) id<XButtonDelegate> delegate;
 @property (nonatomic, assign) BOOL enable;
 @property (nonatomic, readonly) BOOL selected;
 
@@ -47,7 +48,6 @@
 
 - (id) initWithNormalFrame:(CCSpriteFrame*)aNormalFrame selectedFrame:(CCSpriteFrame*)aSelectedFrame;
 - (id) initWithNormalFrame:(CCSpriteFrame*)aNormalFrame selectedFrame:(CCSpriteFrame*)aSelectedFrame disabledFrame:(CCSpriteFrame*)aDisabledFrame;
-- (void) setDelegate:(id<XButtonDelegate>) aDelegate;
 
 - (void) select;
 - (void) deselect;

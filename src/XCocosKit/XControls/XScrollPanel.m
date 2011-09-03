@@ -14,28 +14,34 @@
 //==============================================================================
 @implementation XScrollPanelSlot
 
-@synthesize baseView;
-
 //==============================================================================
 - (id) init
 {
 	if( (self = [super init]) )
 	{
-		// temporarry
-		baseView = [UIButton buttonWithType:UIButtonTypeCustom];
-		[baseView retain];
-		baseView.frame = CGRectZero; //CGRectMake(0, 0, 100, 100);
+		[self configureChilds];
 	}
 	
 	return self;
 }
 
 //==============================================================================
-- (void) dealloc
+//- (void) dealloc
+//{
+//	[super dealloc];
+//}
+
+#pragma mark - override to configure
+//==============================================================================
+- (void) configureChilds
 {
-	[baseView release];
-	
-	[super dealloc];
+	// empty by default
+}
+
+//==============================================================================
+- (void) setTarget:(NSObject*)aTarget action:(SEL)aSelector
+{
+	// empty by default
 }
 
 @end
@@ -45,10 +51,7 @@
 //==============================================================================
 @interface XScrollPanel (Private)
 
-- (void) setupSlots;
-- (void) slotPressed:(id)aSender;
-- (XScrollPanelSlot*) slotBySender:(id)aSender;
-- (CGSize) pageSize;
+- (void) slotPressed;
 
 @end
 
@@ -58,22 +61,19 @@
 //==============================================================================
 @implementation XScrollPanel
 
-@synthesize scrollView;
 @synthesize delegate;
 
 #pragma mark - init/dealloc
 //==============================================================================
-- (id) initWithFrame:(CGRect)aFrame;
+- (id) initWithSlots:(NSArray*)aSlots widthOffset:(NSInteger)aWidthOffset
 {
-	if( (self = [super init]) )
+	if( (self = [super initWithLayers:aSlots widthOffset:aWidthOffset]) )
 	{
-		scrollView = [[UIScrollView alloc] initWithFrame:aFrame];
-		scrollView.delegate = self;
-		scrollView.backgroundColor = [UIColor clearColor];
-		scrollView.showsHorizontalScrollIndicator = NO;
-		scrollView.showsVerticalScrollIndicator = NO;
-		
-		currentPage = 0;
+		slots = [aSlots retain];
+		for(XScrollPanelSlot* slot in aSlots)
+		{
+			[slot setTarget:self action:@selector(slotPressed)];
+		}
 	}
 	
 	return self;
@@ -82,163 +82,43 @@
 //==============================================================================
 - (void) dealloc
 {
-	[scrollView release];
 	[slots release];
 	
 	[super dealloc];
 }
 
-#pragma mark - setup slots
-//==============================================================================
-- (void) setSlotsPerPageRows:(int)aRows cols:(int)aCols
-{
-	slotRows = aRows;
-	slotCols = aCols;
-}
-
-//==============================================================================
-- (void) setSlots:(NSArray*)aSlots
-{
-	XInClassAssert(!slots, @"Slots already exists !!!");
-	if(!slots)
-	{
-		slots = [aSlots retain];
-		[self setupSlots];
-	}
-}
-
-//==============================================================================
-- (void) setupSlots
-{
-	// only for landscape orientation!
-	
-	// calculate page count
-	int pageCount = [self pageCount];
-	
-	int index = 0;
-	XScrollPanelSlot* slot = [slots objectAtIndex:0];
-	CGRect slotFrame = slot.baseView.frame;
-	CGSize pageSize = [self pageSize];
-	CGPoint slotDelta;
-	slotDelta.x = (pageSize.width - slotFrame.size.width * slotCols) / (slotCols+0) + slotFrame.size.width;
-	slotDelta.y = (pageSize.height - slotFrame.size.height * slotRows) / (slotRows+0) + slotFrame.size.height;
-
-	for(int page = 0; page < pageCount; ++page)
-	{
-		UIView* pageView = [UIView new];
-		pageView.frame = CGRectMake(page * pageSize.width, 0, pageSize.width, pageSize.height);
-		pageView.backgroundColor = [UIColor clearColor];
-		[scrollView addSubview:pageView];
-		[pageView release];
-		
-		for(int r = 0; r < slotRows; ++r)
-			for(int c = 0; c < slotCols; ++c)
-			{
-				if( index < [slots count] && (slot = [slots objectAtIndex:index++]) )
-				{
-					// change only origin
-					//slotFrame = slot.baseView.frame;
-					slotFrame.origin.x = (c + 0.5f) * slotDelta.x - slotFrame.size.width / 2;
-					slotFrame.origin.y = (r + 0.5f) * slotDelta.y - slotFrame.size.height / 2;
-					slot.baseView.frame = slotFrame;
-					
-					[slot.baseView addTarget:self action:@selector(slotPressed:) forControlEvents:UIControlEventTouchUpInside];
-					
-					[pageView addSubview:slot.baseView];
-				}
-			}
-	}
-/*
-	int index = 0;
-	XScrollPanelSlot* slot;
-	CGRect slotFrame;
-	CGSize pageSize = scrollView.bounds.size;
-	CGPoint slotDelta;
-	slotDelta.x = pageSize.width / (slotCols + 1);
-	slotDelta.y = pageSize.height / (slotRows + 1);
-	
-	for(int page = 0; page < pageCount; ++page)
-	{
-		UIView* pageView = [UIView new];
-		pageView.frame = CGRectMake(page * pageSize.width, 0, pageSize.width, pageSize.height);
-		pageView.backgroundColor = [UIColor clearColor];
-		[scrollView addSubview:pageView];
-		[pageView release];
-
-		for(int r = 1; r <= slotRows; ++r)
-		for(int c = 1; c <= slotCols; ++c)
-		{
-			if( index < [slots count] && (slot = [slots objectAtIndex:index++]) )
-			{
-				// change only origin
-				slotFrame = slot.baseView.frame;
-				slotFrame.origin.x = c * slotDelta.x - slotFrame.size.width / 2;
-				slotFrame.origin.y = r * slotDelta.y - slotFrame.size.height / 2;
-				slot.baseView.frame = slotFrame;
-				
-				[slot.baseView addTarget:self action:@selector(slotPressed:) forControlEvents:UIControlEventTouchUpInside];
-				
-				[pageView addSubview:slot.baseView];
-			}
-		}
-	}
-//*/
-	
-	scrollView.contentSize = CGSizeMake(pageCount * pageSize.width, pageSize.height);
-}
-
 #pragma mark - delegate
 //==============================================================================
-- (void) scrollViewDidEndDecelerating:(UIScrollView *)aScrollView
+- (void) slotPressed
 {
-	if( [delegate respondsToSelector:@selector(scrollPanel:pageChangedFrom:to:)] )
+	if( delegate && [delegate respondsToSelector:@selector(scrollPanel:slotPressed:atPageIndex:)] )
 	{
-		int pageNumber = scrollView.contentOffset.x / [self pageSize].width;
-		if(currentPage != pageNumber)
-		{
-			[delegate scrollPanel:self pageChangedFrom:currentPage to:pageNumber];
-			currentPage = pageNumber;
-		}
+		XScrollPanelSlot* slot = [slots objectAtIndex:currentScreen_];
+		[delegate scrollPanel:self slotPressed:slot atPageIndex:currentScreen_];
 	}
-}
-
-//==============================================================================
-- (void) slotPressed:(id)aSender
-{
-	if( [delegate respondsToSelector:@selector(scrollPanel:slotPressed:)] )
-	{
-		XScrollPanelSlot* slot = [self slotBySender:aSender];
-		[delegate scrollPanel:self slotPressed:slot];
-	}
-}
-
-#pragma mark - private
-//==============================================================================
-- (XScrollPanelSlot*) slotBySender:(id)aSender
-{
-	XScrollPanelSlot* result = nil;
-	for(XScrollPanelSlot* slot in slots)
-	{
-		if(slot.baseView == aSender)
-		{
-			result = slot;
-			break;
-		}
-	}
-	
-	return result;
-}
-
-//==============================================================================
-- (CGSize) pageSize
-{
-	return scrollView.bounds.size;
 }
 
 //==============================================================================
 - (NSInteger) pageCount
 {
-	return (int)ceilf( [slots count] / (float)(slotRows * slotCols) );
+	return totalScreens_;
+}
+
+//==============================================================================
+- (NSInteger) currentPage
+{
+	return currentScreen_;
+}
+
+//==============================================================================
+-(void) moveToPage:(int)aPage
+{
+	if(currentScreen_ != aPage && delegate && [delegate respondsToSelector:@selector(scrollPanel:pageChangedFrom:to:)] )
+	{
+		[delegate scrollPanel:self pageChangedFrom:currentScreen_ to:aPage];
+	}
+	
+	[super moveToPage:aPage];
 }
 
 //==============================================================================

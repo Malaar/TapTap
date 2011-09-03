@@ -30,6 +30,19 @@
                 <key>sourceSize</key>
                 <string>{200,150}</string>
             </dict>
+            <key>LevelSlotBGLocked.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{201,321},{200,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{200,150}}</string>
+                <key>sourceSize</key>
+                <string>{200,150}</string>
+            </dict>
         </dict>
         <key>metadata</key>
         <dict>
@@ -40,7 +53,7 @@
             <key>size</key>
             <string>{512,512}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:dbac9e08b58e481cdaeca92e89f9f026$</string>
+            <string>$TexturePacker:SmartUpdate:b5870fb9dff014351c114cb5db88d018$</string>
             <key>textureFileName</key>
             <string>LevelMenuUI_0.png</string>
         </dict>
