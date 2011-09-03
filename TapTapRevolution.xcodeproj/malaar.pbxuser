@@ -16,6 +16,7 @@
 		dataTipSortType = 0;
 		debuggerPlugin = GDBDebugging;
 		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
 		enableDebugStr = 1;
 		environmentEntries = (
 		);
@@ -56,8 +57,30 @@
 			026B73431412CCD7003547A1 /* TapTapRevolution */,
 		);
 		perUserDictionary = {
-			PBXPerProjectTemplateStateSaveDate = 336776407;
-			PBXWorkspaceStateSaveDate = 336776407;
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					577,
+					20,
+					48.16259765625,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 336776665;
+			PBXWorkspaceStateSaveDate = 336776665;
 		};
 		sourceControlManager = 026B73951412CCF7003547A1 /* Source Control */;
 		userBuildSettings = {
