@@ -2,3 +2,4 @@ build/
 TapTapRevolution.xcodeproj/project.xcworkspace/
 TapTapRevolution.xcodeproj/xcuserdata/
 
+src/libs/ShareKit/Sharers/Services/Facebook/FBConnect/.DS_Store
