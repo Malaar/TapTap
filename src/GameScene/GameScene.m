@@ -59,7 +59,7 @@
 		
 		// load levels
 		
-		NSString* fileName = [CCFileUtils fullPathFromRelativePath:@"assets/configs/levels.plist"];
+		NSString* fileName = [CCFileUtils fullPathFromRelativePath:@"assets/Configs/levels.plist"];
 		NSArray* arrLevels = [NSArray arrayWithContentsOfFile:fileName];
 		NSAssert(arrLevels, @"dictionary of levels is nil !!!");
 		for(NSDictionary* dict in arrLevels)

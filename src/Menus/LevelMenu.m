@@ -43,9 +43,9 @@
 	CCMenu* menu = [CCMenu menuWithItems:bgSprite, nil];
 	[self addChild:menu];
 	
-	lblevelNumber = [CCLabelBMFont labelWithString:@"" fntFile:@"assets/fonts/button_font.fnt"];
-	lbScore = [CCLabelBMFont labelWithString:@"" fntFile:@"assets/fonts/button_font.fnt"];
-	lbFastTime = [CCLabelBMFont labelWithString:@"" fntFile:@"assets/fonts/button_font.fnt"];
+	lblevelNumber = [CCLabelBMFont labelWithString:@"" fntFile:@"assets/Fonts/button_font.fnt"];
+	lbScore = [CCLabelBMFont labelWithString:@"" fntFile:@"assets/Fonts/button_font.fnt"];
+	lbFastTime = [CCLabelBMFont labelWithString:@"" fntFile:@"assets/Fonts/button_font.fnt"];
 
 	CGPoint center = ccpCompMult(ccpFromSize(bgSprite.contentSize), bgSprite.anchorPoint);
 	lbScore.position = ccp(center.x, center.y + 55);
