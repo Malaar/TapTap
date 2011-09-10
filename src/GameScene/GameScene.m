@@ -9,6 +9,7 @@
 #import "GameScene.h"
 #import "XHighlightedButton.h"
 #import "XSimpleSkinManager.h"
+#import "TapTapManager.h"
 
 //==============================================================================
 //==============================================================================
@@ -56,6 +57,8 @@
 		
 		gameMode = modeRelax;
 		pressedCount = 0;
+		
+		maxHighlightedButtons = [[TapTapManager sharedTapTapManager] maxHighlightedButtons];
 		
 		// load levels
 		
@@ -204,7 +207,7 @@
 	CCLOG(@"Relax time: %0.2f", relaxTime);
 
 	// prepare buttons to highlight
-	int count = rand() % (currentLevel.maxHighlightedButton);
+	int count = rand() % (maxHighlightedButtons);
 	++count;
 	
 	int index;

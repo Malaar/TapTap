@@ -18,15 +18,22 @@
 	
 	// skins
 	NSString* currentSkinName;					///< name of the current skin (see skin manager)
+	
+	// purchase
+	BOOL isPacksBuy;							///< does user buy packs?
+	
+	//packs info
+	NSArray* packsInfo;							///< info about packs
+	
 }
 
 @property (nonatomic, assign) BOOL sfxOn;
 @property (nonatomic, assign) BOOL soundOn;
 @property (nonatomic, retain) NSString* currentSkinName;
+@property (nonatomic, assign) BOOL isPacksBuy;
 
 + (XSettings*) sharedSettings;
 
-- (void) load;
 - (void) save;
 
 @end

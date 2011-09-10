@@ -39,6 +39,8 @@ typedef enum GameMode
 	GameMode gameMode;
 	
 	int pressedCount;
+	
+	int maxHighlightedButtons;
 }
 
 + (id) scene;
