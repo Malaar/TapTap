@@ -10,6 +10,7 @@
 #import "MainMenu.h"
 #import "CocoaExtentions.h"
 #import "XSimpleSkinManager.h"
+#import "TapTapManager.h"
 
 #import "XScrollPanel.h"
 
@@ -140,6 +141,9 @@
 //==============================================================================
 - (void) scrollPanel:(XScrollPanel *)aScrollPanel slotPressed:(XScrollPanelSlot *)aSlot atPageIndex:(int)aPageIndex
 {
+	[TapTapManager sharedTapTapManager].currentLevelIndex = aPageIndex;
+	
+	// temporarily
 	[[CCDirector sharedDirector] replaceScene:[MainMenu scene]];
 }
 
