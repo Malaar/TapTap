@@ -84,6 +84,8 @@
 +(id) nodeWithLayers:(NSArray *)layers widthOffset: (int) widthOffset; 
 -(id) initWithLayers:(NSArray *)layers widthOffset: (int) widthOffset;
 
+-(void) moveToPage:(int)page;
+
 @end
 
 #endif

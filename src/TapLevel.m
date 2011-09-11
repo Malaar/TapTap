@@ -11,7 +11,6 @@
 
 @implementation TapLevel
 
-@synthesize maxHighlightedButton;
 @synthesize highlightingTime;
 @synthesize countToNextLevel;
 
@@ -27,8 +26,6 @@
 	if( (self = [super init]) )
 	{
 		NSNumber* value;
-		value = [aDictionary objectForKey:@"maxHighlightedButton"];
-		maxHighlightedButton = [value intValue];
 		value = [aDictionary objectForKey:@"highlightingTime"];
 		highlightingTime = [value floatValue];
 		value = [aDictionary objectForKey:@"countToNextLevel"];

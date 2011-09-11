@@ -12,20 +12,29 @@
 
 
 //==============================================================================
+typedef enum LevelSlotState
+{
+	levelSlotLock,
+	levelSlotUnlock,
+	levelSlotCompleted
+	
+} LevelSlotState;
+
+//==============================================================================
 //==============================================================================
 //==============================================================================
 ///
 @interface LevelSlot : XScrollPanelSlot
 {
-	UIView* lockView;
-	UILabel* lbLevelNumber;
-	UILabel* lbScore;
-	UILabel* lbFastTime;
-	
-	BOOL lock;										///< is slot locked
+	CCMenuItemSprite* bgSprite;
+	CCLabelBMFont* lblevelNumber;
+	CCLabelBMFont* lbScore;
+	CCLabelBMFont* lbFastTime;
+
+	LevelSlotState state;
 }
 
-@property (nonatomic, readonly) BOOL lock;
+@property (nonatomic, readonly) LevelSlotState state;
 
 - (void) setLevelNumber:(int)aLevelNumber;
 - (void) setScore:(int)aScore;

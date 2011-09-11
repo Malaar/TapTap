@@ -114,7 +114,7 @@
 - (MUToolbar*) createBottomToolbar
 {
     MUToolbar*tb = [[[MUToolbar alloc] init] autorelease];
-    [tb setBackgroundImage:[UIImage imageNamed:@"assets/graphics/WebToolbar/tool_bar_bg.png"]];
+    [tb setBackgroundImage:[UIImage imageNamed:@"assets/Graphics/WebToolbar/tool_bar_bg.png"]];
     return tb;
 }
 
@@ -122,20 +122,20 @@
 - (NSArray*) bottomToolbarElements
 {        
     // to game button
-    MUAutoresizeButton* bt = [MUAutoresizeButton buttonForNavBackByTitleName:@"Game" imageName:@"assets/graphics/WebToolbar/tool_bar_button_back.png"];
+    MUAutoresizeButton* bt = [MUAutoresizeButton buttonForNavBackByTitleName:@"Game" imageName:@"assets/Graphics/WebToolbar/tool_bar_button_back.png"];
     [bt setupFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:12.5f]];
     [bt addTarget:self action:@selector(toGameButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     toGameBarButton = [[UIBarButtonItem alloc] initWithCustomView:bt];
     
     // back button
-    backBarButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"assets/graphics/WebToolbar/back.png"]
+    backBarButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"assets/Graphics/WebToolbar/back.png"]
                                                      style:UIBarButtonItemStylePlain
                                                     target:self  
                                           action:@selector(backButtonPressed:)];
     backBarButton.enabled = NO;
     
     // forvard button
-    forwardBarButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"assets/graphics/WebToolbar/forward.png"]
+    forwardBarButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"assets/Graphics/WebToolbar/forward.png"]
                                                         style:UIBarButtonItemStylePlain
                                                        target:self
                                                        action:@selector(forwardButtonPressed:)];

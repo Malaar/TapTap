@@ -12,6 +12,7 @@
 
 @implementation XButton
 
+@synthesize delegate;
 @synthesize enable;
 @synthesize selected;
 
@@ -81,16 +82,6 @@
 	[targetedAction release];
 	
 	[super dealloc];
-}
-
-//==============================================================================
-- (void) setDelegate:(id<XButtonDelegate>) aDelegate
-{
-	if(delegate != aDelegate)
-	{
-		[delegate release];
-		delegate = [aDelegate retain];
-	}
 }
 
 //==============================================================================

@@ -9,6 +9,7 @@
 #import "GameScene.h"
 #import "XHighlightedButton.h"
 #import "XSimpleSkinManager.h"
+#import "TapTapManager.h"
 
 //==============================================================================
 //==============================================================================
@@ -57,9 +58,11 @@
 		gameMode = modeRelax;
 		pressedCount = 0;
 		
+		maxHighlightedButtons = [[TapTapManager sharedTapTapManager] maxHighlightedButtons];
+		
 		// load levels
 		
-		NSString* fileName = [CCFileUtils fullPathFromRelativePath:@"assets/configs/levels.plist"];
+		NSString* fileName = [CCFileUtils fullPathFromRelativePath:@"assets/Configs/levels.plist"];
 		NSArray* arrLevels = [NSArray arrayWithContentsOfFile:fileName];
 		NSAssert(arrLevels, @"dictionary of levels is nil !!!");
 		for(NSDictionary* dict in arrLevels)
@@ -204,7 +207,7 @@
 	CCLOG(@"Relax time: %0.2f", relaxTime);
 
 	// prepare buttons to highlight
-	int count = rand() % (currentLevel.maxHighlightedButton);
+	int count = rand() % (maxHighlightedButtons);
 	++count;
 	
 	int index;

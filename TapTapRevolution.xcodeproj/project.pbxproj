@@ -227,6 +227,10 @@
 		026E708713F5DEC000809EEF /* MainMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 026E708613F5DEC000809EEF /* MainMenu.m */; };
 		0277822414010A310043B0AF /* XSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 0277822314010A310043B0AF /* XSettings.m */; };
 		0293562213FC876A00568C1B /* LevelMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 0293562113FC876A00568C1B /* LevelMenu.m */; };
+		029A1FC7141B634B00AEE017 /* LevelResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 029A1FC0141B634B00AEE017 /* LevelResults.m */; };
+		029A1FC8141B634B00AEE017 /* PackInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 029A1FC2141B634B00AEE017 /* PackInfo.m */; };
+		029A1FC9141B634B00AEE017 /* TapTapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 029A1FC4141B634B00AEE017 /* TapTapManager.m */; };
+		029A1FCA141B634B00AEE017 /* XSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 029A1FC6141B634B00AEE017 /* XSettings.m */; };
 		02C496C814093AD1008C3691 /* CCScrollLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C496C714093AD1008C3691 /* CCScrollLayer.m */; };
 		02EDE36813FC6C0C007A9EDB /* XLayerViewed.m in Sources */ = {isa = PBXBuildFile; fileRef = 02EDE36713FC6C0C007A9EDB /* XLayerViewed.m */; };
 		02EDE36C13FC7089007A9EDB /* XScrollPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 02EDE36B13FC7089007A9EDB /* XScrollPanel.m */; };
@@ -579,10 +583,16 @@
 		026E704913F5DA2E00809EEF /* XTargetedAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTargetedAction.m; sourceTree = "<group>"; };
 		026E708513F5DEC000809EEF /* MainMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenu.h; sourceTree = "<group>"; };
 		026E708613F5DEC000809EEF /* MainMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenu.m; sourceTree = "<group>"; };
-		0277822214010A310043B0AF /* XSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSettings.h; sourceTree = "<group>"; };
-		0277822314010A310043B0AF /* XSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSettings.m; sourceTree = "<group>"; };
 		0293562013FC876A00568C1B /* LevelMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelMenu.h; sourceTree = "<group>"; };
 		0293562113FC876A00568C1B /* LevelMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelMenu.m; sourceTree = "<group>"; };
+		029A1FBF141B634B00AEE017 /* LevelResults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LevelResults.h; path = src/LevelResults.h; sourceTree = SOURCE_ROOT; };
+		029A1FC0141B634B00AEE017 /* LevelResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LevelResults.m; path = src/LevelResults.m; sourceTree = SOURCE_ROOT; };
+		029A1FC1141B634B00AEE017 /* PackInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PackInfo.h; path = src/PackInfo.h; sourceTree = SOURCE_ROOT; };
+		029A1FC2141B634B00AEE017 /* PackInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PackInfo.m; path = src/PackInfo.m; sourceTree = SOURCE_ROOT; };
+		029A1FC3141B634B00AEE017 /* TapTapManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TapTapManager.h; path = src/TapTapManager.h; sourceTree = SOURCE_ROOT; };
+		029A1FC4141B634B00AEE017 /* TapTapManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TapTapManager.m; path = src/TapTapManager.m; sourceTree = SOURCE_ROOT; };
+		029A1FC5141B634B00AEE017 /* XSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XSettings.h; path = src/XSettings.h; sourceTree = SOURCE_ROOT; };
+		029A1FC6141B634B00AEE017 /* XSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XSettings.m; path = src/XSettings.m; sourceTree = SOURCE_ROOT; };
 		02C496C614093AD1008C3691 /* CCScrollLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCScrollLayer.h; path = "src/libs/givp-Cocos2d-Menu-Scroller-003053e/CCScrollLayer.h"; sourceTree = SOURCE_ROOT; };
 		02C496C714093AD1008C3691 /* CCScrollLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCScrollLayer.m; path = "src/libs/givp-Cocos2d-Menu-Scroller-003053e/CCScrollLayer.m"; sourceTree = SOURCE_ROOT; };
 		02EDE36613FC6C0C007A9EDB /* XLayerViewed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLayerViewed.h; sourceTree = "<group>"; };
@@ -1252,12 +1262,18 @@
 				025978A613F46F4D00518A9C /* Prime */,
 				025978AC13F46F4D00518A9C /* TapLevel.h */,
 				025978AD13F46F4D00518A9C /* TapLevel.m */,
+				029A1FBF141B634B00AEE017 /* LevelResults.h */,
+				029A1FC0141B634B00AEE017 /* LevelResults.m */,
+				029A1FC1141B634B00AEE017 /* PackInfo.h */,
+				029A1FC2141B634B00AEE017 /* PackInfo.m */,
+				029A1FC3141B634B00AEE017 /* TapTapManager.h */,
+				029A1FC4141B634B00AEE017 /* TapTapManager.m */,
+				029A1FC5141B634B00AEE017 /* XSettings.h */,
+				029A1FC6141B634B00AEE017 /* XSettings.m */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				50F414EB1069373D002A0D5E /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				0277822214010A310043B0AF /* XSettings.h */,
-				0277822314010A310043B0AF /* XSettings.m */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -1917,7 +1933,6 @@
 				02EDE36813FC6C0C007A9EDB /* XLayerViewed.m in Sources */,
 				02EDE36C13FC7089007A9EDB /* XScrollPanel.m in Sources */,
 				0293562213FC876A00568C1B /* LevelMenu.m in Sources */,
-				0277822414010A310043B0AF /* XSettings.m in Sources */,
 				0232C094140835C100E857B7 /* CocoaExtentions.m in Sources */,
 				E6FE48EA1406EA3C00A0CF40 /* RateMenu.m in Sources */,
 				E62B126F14086E4F001EAF57 /* MUAutoresizeButton.m in Sources */,
@@ -1984,7 +1999,10 @@
 				E6F15120140DE70800FF0164 /* SHKOAuthView.m in Sources */,
 				E6F15121140DE70800FF0164 /* SHKShareMenu.m in Sources */,
 				E6F15122140DE70800FF0164 /* SHKViewControllerWrapper.m in Sources */,
-				47DA88A01411A7740042AD4A /* CreditsMenu.m in Sources */,
+				029A1FC7141B634B00AEE017 /* LevelResults.m in Sources */,
+				029A1FC8141B634B00AEE017 /* PackInfo.m in Sources */,
+				029A1FC9141B634B00AEE017 /* TapTapManager.m in Sources */,
+				029A1FCA141B634B00AEE017 /* XSettings.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2198,7 +2216,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Don't Code Sign";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: DMITRIY SHARKOV (3ZG322Y28A)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					DEBUG,
@@ -2213,7 +2231,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C232C69A-185C-499F-AF55-E4BC64F35A88";
+				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -2224,7 +2243,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Don't Code Sign";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: DMITRIY SHARKOV (3ZG322Y28A)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NS_BLOCK_ASSERTIONS,
@@ -2238,7 +2257,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				PREBINDING = NO;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C232C69A-185C-499F-AF55-E4BC64F35A88";
+				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

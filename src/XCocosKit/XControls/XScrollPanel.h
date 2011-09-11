@@ -7,16 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CCScrollLayer.h"
+#include "XCocosExtensions.h"
+
 
 //==============================================================================
 //==============================================================================
 //==============================================================================
-@interface XScrollPanelSlot : NSObject
+@interface XScrollPanelSlot : CCLayer
 {
-	UIButton* baseView;
 }
 
-@property (nonatomic, readonly) UIButton* baseView;
+- (void) configureChilds;
+
+- (void) setTarget:(NSObject*)aTarget action:(SEL)aSelector;
 
 @end
 
@@ -28,7 +32,7 @@
 @protocol XScrollPanelDelegate
 
 @optional
-- (void) scrollPanel:(XScrollPanel*)aScrollPanel slotPressed:(XScrollPanelSlot*)aSlot;
+- (void) scrollPanel:(XScrollPanel*)aScrollPanel slotPressed:(XScrollPanelSlot*)aSlot atPageIndex:(int)aPageIndex;
 - (void) scrollPanel:(XScrollPanel*)aScrollPanel pageChangedFrom:(int)aPageFrom to:(int)aPageTo;
 
 @end
@@ -37,27 +41,18 @@
 //==============================================================================
 //==============================================================================
 //==============================================================================
-@interface XScrollPanel : NSObject <UIScrollViewDelegate>
+@interface XScrollPanel : CCScrollLayer
 {
-	UIScrollView* scrollView;
-	int slotRows;										///< count of rows of slots on page
-	int slotCols;										///< count of cols of slots on page
-
 	NSArray* slots;
 	
 	NSObject<XScrollPanelDelegate>* delegate;
-	NSInteger currentPage;								///< index of current page
 }
 
 @property (nonatomic, assign) NSObject<XScrollPanelDelegate>* delegate;
 
-@property (nonatomic, readonly) UIScrollView* scrollView;
-
-- (id) initWithFrame:(CGRect)aFrame;
-
-- (void) setSlotsPerPageRows:(int)aRows cols:(int)aCols;
-- (void) setSlots:(NSArray*)aSlots;
+- (id) initWithSlots:(NSArray*)aSlots widthOffset:(NSInteger)aWidthOffset;
 
 - (NSInteger) pageCount;
+- (NSInteger) currentPage;
 
 @end

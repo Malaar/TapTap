@@ -10,15 +10,16 @@
 #import "MainMenu.h"
 #import "CocoaExtentions.h"
 #import "XSimpleSkinManager.h"
+#import "TapTapManager.h"
 
-#import "CCScrollLayer.h"
+#import "XScrollPanel.h"
 
 //==============================================================================
 //==============================================================================
 //==============================================================================
 @implementation LevelSlot
 
-@synthesize lock;
+@synthesize state;
 
 #pragma mark - init/dealloc
 //==============================================================================
@@ -26,77 +27,77 @@
 {
 	if( (self = [super init]) )
 	{
-		baseView.frame = CGRectMake(0.0f, 0.0f, 200.0f, 150.0f);
-		
-		lock = NO;
-		lockView = nil;
-		
-		// level number view
-		CGRect frame = baseView.bounds;
-		lbLevelNumber = [[UILabel alloc] initWithFrame:frame];
-		[baseView addSubview:lbLevelNumber];
-		[lbLevelNumber release];
-		lbLevelNumber.backgroundColor = [UIColor clearColor];
-		lbLevelNumber.font = [UIFont fontWithName:@"Helvetica" size:64];
-		lbLevelNumber.textColor = [UIColor colorWithRedI:200 greenI:200 blueI:200 alphaI:255];
-		lbLevelNumber.textAlignment = UITextAlignmentCenter;
-		
-		// score
-		frame = CGRectMake(0, 0, baseView.bounds.size.width, 40);
-		lbScore = [[UILabel alloc] initWithFrame:frame];
-		[baseView addSubview:lbScore];
-		[lbScore release];
-		lbScore.backgroundColor = [UIColor clearColor];
-		lbScore.font = [UIFont fontWithName:@"Helvetica" size:34];
-		lbScore.textColor = [UIColor colorWithRedI:200 greenI:200 blueI:200 alphaI:255];
-		lbScore.textAlignment = UITextAlignmentCenter;
-
-		// fast time
-		frame = CGRectMake(0, baseView.bounds.size.height - 40, baseView.bounds.size.width, 40);
-		lbFastTime = [[UILabel alloc] initWithFrame:frame];
-		[baseView addSubview:lbFastTime];
-		[lbFastTime release];
-		lbFastTime.backgroundColor = [UIColor clearColor];
-		lbFastTime.font = [UIFont fontWithName:@"Helvetica" size:34];
-		lbFastTime.textColor = [UIColor colorWithRedI:200 greenI:200 blueI:200 alphaI:255];
-		lbFastTime.textAlignment = UITextAlignmentCenter;
+		state = levelSlotUnlock;
 	}
 	
 	return self;
 }
 
+//==============================================================================
+- (void) configureChilds
+{
+	bgSprite = [CCMenuItemSprite itemFromNormalSprite:[CCSprite spriteWithSpriteFrameName:@"LevelSlotBG.png"]
+									   selectedSprite:nil
+									   disabledSprite:[CCSprite spriteWithSpriteFrameName:@"LevelSlotBGLocked.png"]
+											   target:nil
+											 selector:nil];
+	CCMenu* menu = [CCMenu menuWithItems:bgSprite, nil];
+	[self addChild:menu];
+	
+	lblevelNumber = [CCLabelBMFont labelWithString:@"" fntFile:@"assets/Fonts/button_font.fnt"];
+	lbScore = [CCLabelBMFont labelWithString:@"" fntFile:@"assets/Fonts/button_font.fnt"];
+	lbFastTime = [CCLabelBMFont labelWithString:@"" fntFile:@"assets/Fonts/button_font.fnt"];
+
+	CGPoint center = ccpCompMult(ccpFromSize(bgSprite.contentSize), bgSprite.anchorPoint);
+	lbScore.position = ccp(center.x, center.y + 55);
+	[bgSprite addChild:lbScore];
+	
+	lblevelNumber.position = center;
+	[bgSprite addChild:lblevelNumber];
+	
+	lbFastTime.position = ccp(center.x, center.y - 55);
+	[bgSprite addChild:lbFastTime];
+}
+
+//==============================================================================
+- (void) setTarget:(NSObject *)aTarget action:(SEL)aSelector
+{
+	[bgSprite setTarget:aTarget action:aSelector];
+}
+
 #pragma mark - properties
 //==============================================================================
-- (void) setLock:(BOOL)aLock
+- (void) setState:(LevelSlotState)aState
 {
-	lock = aLock;
+	state = aState;
 	
-	if(lock)
+	if(state != levelSlotCompleted)
 	{
-		UIImage* lockImage = [UIImage imageNamed:@""];
-		lockView = [[UIImageView alloc] initWithImage:lockImage];
-		[baseView addSubview:lockView];
-		[lockView release];
-		lockView.bounds = baseView.bounds;
+		lbScore.visible = NO;
+		//lblevelNumber.visible = NO;
+		lbFastTime.visible = NO;
 	}
+	
+	if(state == levelSlotLock)
+		[bgSprite setIsEnabled:NO];
 }
 
 //==============================================================================
 - (void) setLevelNumber:(int)aLevelNumber
 {
-	lbLevelNumber.text = [NSString stringWithFormat:@"%i", aLevelNumber];
+	[lblevelNumber setText:[NSString stringWithFormat:@"%i", aLevelNumber]];
 }
 
 //==============================================================================
 - (void) setScore:(int)aScore
 {
-	lbScore.text = [NSString stringWithFormat:@"%i", aScore];
+	[lbScore setText:[NSString stringWithFormat:@"%i", aScore]];
 }
 
 //==============================================================================
 - (void) setFastTime:(int)aFastTime
 {
-	lbFastTime.text = [NSString stringWithFormat:@"%i", aFastTime];
+	[lbFastTime setText:[NSString stringWithFormat:@"%i", aFastTime]];
 }
 
 @end
@@ -125,78 +126,24 @@
 	return scene;
 }
 
-//==============================================================================
-- (id) init
-{
-	if( (self = [super init]) )
-	{
-		/*
-		CGSize screenSize = [UIScreen mainScreen].bounds.size;
-		
-		//
-		CGRect frame = CGRectMake(0, 0, screenSize.height, 290);
-		XScrollPanel* scrollPanel = [[XScrollPanel alloc] initWithFrame:frame];
-		scrollPanel.delegate = self;
-		[primeView addSubview:scrollPanel.scrollView];
-		scrollPanel.scrollView.pagingEnabled = YES;
-//		[scrollPanel release];
-		[scrollPanel setSlotsPerPageRows:1 cols:2];
-		
-		// slot bg
-		XSimpleSkinManager* skinManager = [XSimpleSkinManager sharedSimpleSkinManager];
-		NSString* resource = [skinManager localPathToCurrentSkin:@"UI/LevelSlotBG.png"];
-		NSLog(@"resource: %@", resource);
-		UIImage* slotBGImage = [UIImage imageNamed:resource];
-
-		NSMutableArray* slots = [NSMutableArray array];
-		for(int i = 0; i < 20; ++i)
-		{
-			LevelSlot* slot = [[LevelSlot new] autorelease];
-			[slots addObject:slot];
-			[slot setLevelNumber:i + 1];
-			[slot setScore:1000];
-			[slot setFastTime:20];
-			[slot.baseView setBackgroundImage:slotBGImage forState:UIControlStateNormal];
-			
-		}
-		[scrollPanel setSlots:slots];
-
-		frame = primeView.frame;
-		frame.size.height -= 60;
-		primeView.frame = frame;
-		//*/
-		
-		/*
-		// back button
-		UIButton* btBack = [UIButton buttonWithType:UIButtonTypeCustom];
-		[primeView addSubview:btBack];
-		UIImage* imgNormal = [UIImage imageNamed:[skinManager localPathToCurrentSkin:@"UI/ButtonNormal.png"]];
-		UIImage* imgSelected = [UIImage imageNamed:[skinManager localPathToCurrentSkin:@"UI/ButtonPressed.png"]];
-
-		[btBack setBackgroundImage:imgNormal forState:UIControlStateNormal];
-		//[btBack setBackgroundImage:imgSelected forState:UIControlStateSelected];
-		[btBack setBackgroundImage:imgSelected forState:UIControlStateHighlighted];
-
-		frame = btBack.frame;
-		frame.size = imgNormal.size;
-		frame.origin = CGPointMake(screenSize.height / 2.0f - imgNormal.size.width / 2, screenSize.width - imgNormal.size.height - 10);
-		btBack.frame = frame;
-		
-		[btBack setTitle:@"Back" forState:UIControlStateNormal];
-		UIColor* color = [UIColor colorWithRedI:255 greenI:10 blueI:0 alphaI:255];
-		[btBack setTitleColor:color forState:UIControlStateNormal];
-		btBack.titleLabel.font = [UIFont fontWithName:@"Helvetica" size:28];
-		//*/
-	}
-	
-	return self;
-}
+////==============================================================================
+//- (id) init
+//{
+//	if( (self = [super init]) )
+//	{
+//		// ...
+//	}
+//	
+//	return self;
+//}
 
 #pragma mark - scrollPanel delegate
 //==============================================================================
-- (void) scrollPanel:(XScrollPanel *)aScrollPanel slotPressed:(XScrollPanelSlot *)aSlot
+- (void) scrollPanel:(XScrollPanel *)aScrollPanel slotPressed:(XScrollPanelSlot *)aSlot atPageIndex:(int)aPageIndex
 {
-	aSlot.baseView.backgroundColor = [UIColor redColor];
+	[TapTapManager sharedTapTapManager].currentLevelIndex = aPageIndex;
+	
+	// temporarily
 	[[CCDirector sharedDirector] replaceScene:[MainMenu scene]];
 }
 
@@ -222,38 +169,36 @@
 //==============================================================================
 - (void) configureChilds
 {
+	// BG
 	CCSprite* bg = [CCSprite spriteWithSpriteFrameName:@"LevelMenuBG.png"];
 	[self addChild:bg];
 	bg.anchorPoint = ccp(0.0f, 0.0f);
 	bg.position = ccp(0.0f, 0.0f);
 	
-	CGSize screenSize = [CCDirector sharedDirector].winSize;
-	
-	// page
-	CCLayer* pg1 = [CCLayer node];
-	CCLabelTTF* lb1 = [CCLabelTTF labelWithString:@"Page 1" fontName:@"Helvetica" fontSize:36];
-	[pg1 addChild:lb1];
-	lb1.position = ccp(screenSize.width / 2, screenSize.height / 2);
-	
-	// page
-	CCLayer* pg2 = [CCLayer node];
-	CCLabelTTF* lb2 = [CCLabelTTF labelWithString:@"Page 2" fontName:@"Helvetica" fontSize:36];
-	[pg2 addChild:lb2];
-	lb2.position = ccp(screenSize.width / 2, screenSize.height / 2);
-	
-	// page
-	CCLayer* pg3 = [CCLayer node];
-	CCLabelTTF* lb3 = [CCLabelTTF labelWithString:@"Page 3" fontName:@"Helvetica" fontSize:36];
-	[pg3 addChild:lb3];
-	lb3.position = ccp(screenSize.width / 2, screenSize.height / 2);
-	
-	
-	NSArray* layers = [NSArray arrayWithObjects: pg1, pg2, pg3, nil];
-	CCScrollLayer* sl = [CCScrollLayer nodeWithLayers:layers widthOffset:200];
-	[self addChild: sl];
-	sl.showPagesIndicator = YES;
-	sl.minimumTouchLengthToSlide = 1;
-	sl.minimumTouchLengthToChangePage = 20;
+	// scroll panel
+	NSMutableArray* slots = [NSMutableArray array];
+	for(int i = 0; i < 5; ++i)
+	{
+		LevelSlot* slot = [[LevelSlot new] autorelease];
+		[slot setLevelNumber:i + 1];
+		[slot setScore:3];
+		[slot setFastTime:16];
+		[slots addObject:slot];
+		
+		if(i == 2)
+			slot.state = levelSlotUnlock;
+		else if(i > 2)
+			slot.state = levelSlotLock;
+		else
+			slot.state = levelSlotCompleted;
+
+	}
+	XScrollPanel* sc = [[XScrollPanel alloc] initWithSlots:slots widthOffset:200];
+	sc.delegate = self;
+	sc.showPagesIndicator = NO;
+	sc.minimumTouchLengthToSlide = 1;
+	sc.minimumTouchLengthToChangePage = 20;
+	[self addChild:sc];
 }
 
 //==============================================================================
