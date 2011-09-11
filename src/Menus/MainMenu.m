@@ -11,7 +11,7 @@
 #import "XSimpleSkinManager.h"
 #import "XSettings.h"
 #import "RateMenu.h"
-
+#import "CreditsMenu.h"
 #import "LevelMenu.h"
 
 
@@ -195,6 +195,7 @@
 //==============================================================================
 - (void) creditsButtonPressed
 {
+	[[CCDirector sharedDirector] pushScene:[CreditsMenu scene]];
 }
 
 //==============================================================================
