@@ -231,8 +231,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -269,18 +267,21 @@
 							<array>
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>025978AE13F46F4D00518A9C</string>
+								<string>025978B613F46F4D00518A9C</string>
 								<string>025978A513F46F4D00518A9C</string>
 								<string>1C37FABC05509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>30</integer>
+									<integer>10</integer>
+									<integer>6</integer>
+									<integer>2</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 97}, {186, 567}}</string>
+							<string>{{0, 0}, {186, 567}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -310,12 +311,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>TapTapManager.h</string>
+								<string>XLayerViewed.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -323,11 +326,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>TapTapManager.h</string>
+										<string>XLayerViewed.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>02F47A8F141AE0F300668B12</string>
+										<string>02870D7D1421213200501A22</string>
 										<key>history</key>
 										<array>
 											<string>02C3BD3B141AAA3E008D2BC0</string>
@@ -339,14 +342,8 @@
 											<string>02F47A84141AE0F300668B12</string>
 											<string>02F47A85141AE0F300668B12</string>
 											<string>02F47A86141AE0F300668B12</string>
-											<string>02F47A87141AE0F300668B12</string>
-											<string>02F47A88141AE0F300668B12</string>
-											<string>02F47A89141AE0F300668B12</string>
-											<string>02F47A8A141AE0F300668B12</string>
-											<string>02F47A8B141AE0F300668B12</string>
-											<string>02F47A8C141AE0F300668B12</string>
-											<string>02F47A8D141AE0F300668B12</string>
-											<string>02F47A8E141AE0F300668B12</string>
+											<string>02870D7B1421213200501A22</string>
+											<string>02870D7C1421213200501A22</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -404,9 +401,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>02F47A90141AE0F300668B12</string>
+				<string>02870D7E1421213200501A22</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>02F47A91141AE0F300668B12</string>
+				<string>02870D7F1421213200501A22</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -544,8 +541,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1C78EAAD065D492600B07095</string>
-		<string>1CD10A99069EF8BA00B06720</string>
 		<string>026B739C1412CDC5003547A1</string>
 		<string>/Users/malaar/Documents/TeamDev/TapTap/TapTapRevolution.xcodeproj</string>
 	</array>
@@ -571,7 +566,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>RateMenu.m</string>
+								<string></string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -588,8 +583,6 @@
 							<string>218pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -629,7 +622,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>026B739C1412CDC5003547A1</string>
-				<string>02F47A3B141AC32E00668B12</string>
+				<string>02870D801421213200501A22</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

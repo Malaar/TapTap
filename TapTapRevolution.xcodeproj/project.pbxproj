@@ -11,6 +11,7 @@
 		022328D513F82B4700DA78D6 /* XMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 022328D413F82B4700DA78D6 /* XMenuButton.m */; };
 		0232C094140835C100E857B7 /* CocoaExtentions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0232C093140835C100E857B7 /* CocoaExtentions.m */; };
 		0232C145140849C900E857B7 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 0232C122140849C900E857B7 /* assets */; };
+		024BF5411422BCD500FF95F4 /* CreditsMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 024BF5401422BCD500FF95F4 /* CreditsMenu.m */; };
 		0259789D13F46F1500518A9C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0259789B13F46F1500518A9C /* main.m */; };
 		025978B913F46F4D00518A9C /* XHighlightedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 025978A113F46F4D00518A9C /* XHighlightedButton.m */; };
 		025978BA13F46F4D00518A9C /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 025978A413F46F4D00518A9C /* GameScene.m */; };
@@ -225,7 +226,6 @@
 		02597A6513F46F7900518A9C /* JSONRepresentation.h in Headers */ = {isa = PBXBuildFile; fileRef = 0259799A13F46F6800518A9C /* JSONRepresentation.h */; };
 		026E704A13F5DA2E00809EEF /* XTargetedAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 026E704913F5DA2E00809EEF /* XTargetedAction.m */; };
 		026E708713F5DEC000809EEF /* MainMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 026E708613F5DEC000809EEF /* MainMenu.m */; };
-		0277822414010A310043B0AF /* XSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 0277822314010A310043B0AF /* XSettings.m */; };
 		0293562213FC876A00568C1B /* LevelMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 0293562113FC876A00568C1B /* LevelMenu.m */; };
 		029A1FC7141B634B00AEE017 /* LevelResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 029A1FC0141B634B00AEE017 /* LevelResults.m */; };
 		029A1FC8141B634B00AEE017 /* PackInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 029A1FC2141B634B00AEE017 /* PackInfo.m */; };
@@ -234,7 +234,6 @@
 		02C496C814093AD1008C3691 /* CCScrollLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C496C714093AD1008C3691 /* CCScrollLayer.m */; };
 		02EDE36813FC6C0C007A9EDB /* XLayerViewed.m in Sources */ = {isa = PBXBuildFile; fileRef = 02EDE36713FC6C0C007A9EDB /* XLayerViewed.m */; };
 		02EDE36C13FC7089007A9EDB /* XScrollPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 02EDE36B13FC7089007A9EDB /* XScrollPanel.m */; };
-		47DA88A01411A7740042AD4A /* CreditsMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 47DA889F1411A7740042AD4A /* CreditsMenu.m */; };
 		47DA8A86141D24720042AD4A /* KiKSoftLogo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 47DA8A85141D24720042AD4A /* KiKSoftLogo.gif */; };
 		505574581045D68500A31725 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506EDBA4102F4C9F00A389B3 /* AVFoundation.framework */; };
 		505574591045D68500A31725 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC6640020F83B3EA000B3E49 /* AudioToolbox.framework */; };
@@ -353,6 +352,8 @@
 		0232C092140835C100E857B7 /* CocoaExtentions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CocoaExtentions.h; path = src/XCocosKit/XExtentions/CocoaExtentions.h; sourceTree = SOURCE_ROOT; };
 		0232C093140835C100E857B7 /* CocoaExtentions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CocoaExtentions.m; path = src/XCocosKit/XExtentions/CocoaExtentions.m; sourceTree = SOURCE_ROOT; };
 		0232C122140849C900E857B7 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = assets; path = Resources/assets; sourceTree = SOURCE_ROOT; };
+		024BF53F1422BCD500FF95F4 /* CreditsMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreditsMenu.h; sourceTree = "<group>"; };
+		024BF5401422BCD500FF95F4 /* CreditsMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditsMenu.m; sourceTree = "<group>"; };
 		0259789B13F46F1500518A9C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = src/main.m; sourceTree = SOURCE_ROOT; };
 		025978A013F46F4D00518A9C /* XHighlightedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XHighlightedButton.h; path = src/Controls/XHighlightedButton.h; sourceTree = SOURCE_ROOT; };
 		025978A113F46F4D00518A9C /* XHighlightedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XHighlightedButton.m; path = src/Controls/XHighlightedButton.m; sourceTree = SOURCE_ROOT; };
@@ -600,8 +601,6 @@
 		02EDE36A13FC7089007A9EDB /* XScrollPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XScrollPanel.h; sourceTree = "<group>"; };
 		02EDE36B13FC7089007A9EDB /* XScrollPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XScrollPanel.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* TapTapRevolution.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TapTapRevolution.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		47DA889E1411A7740042AD4A /* CreditsMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreditsMenu.h; sourceTree = "<group>"; };
-		47DA889F1411A7740042AD4A /* CreditsMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditsMenu.m; sourceTree = "<group>"; };
 		47DA8A85141D24720042AD4A /* KiKSoftLogo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = KiKSoftLogo.gif; sourceTree = "<group>"; };
 		506EDB87102F4C4000A389B3 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		506EDBA4102F4C9F00A389B3 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -833,14 +832,14 @@
 		025978A513F46F4D00518A9C /* Menus */ = {
 			isa = PBXGroup;
 			children = (
+				024BF53F1422BCD500FF95F4 /* CreditsMenu.h */,
+				024BF5401422BCD500FF95F4 /* CreditsMenu.m */,
 				026E708513F5DEC000809EEF /* MainMenu.h */,
 				026E708613F5DEC000809EEF /* MainMenu.m */,
 				0293562013FC876A00568C1B /* LevelMenu.h */,
 				0293562113FC876A00568C1B /* LevelMenu.m */,
 				E6FE48E81406EA3C00A0CF40 /* RateMenu.h */,
 				E6FE48E91406EA3C00A0CF40 /* RateMenu.m */,
-				47DA889E1411A7740042AD4A /* CreditsMenu.h */,
-				47DA889F1411A7740042AD4A /* CreditsMenu.m */,
 			);
 			name = Menus;
 			path = src/Menus;
@@ -2003,6 +2002,7 @@
 				029A1FC8141B634B00AEE017 /* PackInfo.m in Sources */,
 				029A1FC9141B634B00AEE017 /* TapTapManager.m in Sources */,
 				029A1FCA141B634B00AEE017 /* XSettings.m in Sources */,
+				024BF5411422BCD500FF95F4 /* CreditsMenu.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
