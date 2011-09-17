@@ -1,0 +1,15 @@
+build/
+TapTapRevolution.xcodeproj/project.xcworkspace/
+TapTapRevolution.xcodeproj/xcuserdata/
+<<<<<<< HEAD
+Resources/.DS_Store
+src/libs/ShareKit/Sharers/Services/Facebook/FBConnect/.DS_Store
+=======
+
+src/libs/ShareKit/Sharers/Services/Facebook/FBConnect/.DS_Store
+Resources/assets/Configs/.DS_Store
+Resources/assets/Graphics/.DS_Store
+Resources/assets/Graphics/DefaultSkin/GameScene/.DS_Store
+Resources/assets/Graphics/DefaultSkin/UI/.DS_Store
+Resources/assets/Graphics/WebToolbar/.DS_Store
+>>>>>>> cd2b0a8109a9b41b1250d2b7dad4c3b4a6006901
