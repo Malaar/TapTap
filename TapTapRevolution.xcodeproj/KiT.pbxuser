@@ -3,22 +3,22 @@
 	024BF53F1422BCD500FF95F4 /* CreditsMenu.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {755, 478}}";
-			sepNavSelRange = "{0, 0}";
+			sepNavSelRange = "{138, 96}";
 			sepNavVisRange = "{0, 337}";
 		};
 	};
 	024BF5401422BCD500FF95F4 /* CreditsMenu.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1132, 1404}}";
-			sepNavSelRange = "{1927, 0}";
-			sepNavVisRange = "{1681, 1319}";
+			sepNavIntBoundsRect = "{{0, 0}, {755, 1521}}";
+			sepNavSelRange = "{162, 30}";
+			sepNavVisRange = "{0, 1024}";
 		};
 	};
 	026E708613F5DEC000809EEF /* MainMenu.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {873, 2977}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{7009, 1115}";
+			sepNavIntBoundsRect = "{{0, 0}, {824, 2899}}";
+			sepNavSelRange = "{7379, 0}";
+			sepNavVisRange = "{6648, 1167}";
 		};
 	};
 	029A1FC1141B634B00AEE017 /* PackInfo.h */ = {
@@ -264,6 +264,20 @@
 		vrLen = 1319;
 		vrLoc = 1681;
 	};
+	47DA8B551424F6C70042AD4A /* OptionsMenu.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {755, 478}}";
+			sepNavSelRange = "{324, 0}";
+			sepNavVisRange = "{0, 350}";
+		};
+	};
+	47DA8B561424F6C70042AD4A /* OptionsMenu.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {873, 1599}}";
+			sepNavSelRange = "{1375, 0}";
+			sepNavVisRange = "{1018, 1604}";
+		};
+	};
 	506EE05D10304ED200A389B3 /* cocos2d libraries */ = {
 		activeExec = 0;
 	};
@@ -277,8 +291,8 @@
 	E6FE48E91406EA3C00A0CF40 /* RateMenu.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {943, 1989}}";
-			sepNavSelRange = "{429, 80}";
-			sepNavVisRange = "{198, 1331}";
+			sepNavSelRange = "{936, 4149}";
+			sepNavVisRange = "{3, 1062}";
 		};
 	};
 }

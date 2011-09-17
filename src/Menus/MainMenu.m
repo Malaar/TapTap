@@ -13,6 +13,7 @@
 #import "RateMenu.h"
 #import "CreditsMenu.h"
 #import "LevelMenu.h"
+#import "OptionsMenu.h"
 
 
 //==============================================================================
@@ -201,6 +202,7 @@
 //==============================================================================
 - (void) optionsButtonPressed
 {
+	[[CCDirector sharedDirector] pushScene:[OptionsMenu scene]];
 }
 
 //==============================================================================
