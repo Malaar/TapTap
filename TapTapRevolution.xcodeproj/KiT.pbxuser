@@ -9,9 +9,9 @@
 	};
 	024BF5401422BCD500FF95F4 /* CreditsMenu.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1860, 1508}}";
-			sepNavSelRange = "{2669, 0}";
-			sepNavVisRange = "{1763, 1709}";
+			sepNavIntBoundsRect = "{{0, 0}, {1132, 1404}}";
+			sepNavSelRange = "{1927, 0}";
+			sepNavVisRange = "{1681, 1319}";
 		};
 	};
 	026E708613F5DEC000809EEF /* MainMenu.m */ = {
@@ -92,6 +92,7 @@
 			47DA8B441424E1D60042AD4A /* PBXTextBookmark */ = 47DA8B441424E1D60042AD4A /* PBXTextBookmark */;
 			47DA8B481424E22E0042AD4A /* PBXTextBookmark */ = 47DA8B481424E22E0042AD4A /* PBXTextBookmark */;
 			47DA8B4D1424E9710042AD4A /* PBXTextBookmark */ = 47DA8B4D1424E9710042AD4A /* PBXTextBookmark */;
+			47DA8B521424F0180042AD4A /* PBXTextBookmark */ = 47DA8B521424F0180042AD4A /* PBXTextBookmark */;
 		};
 		sourceControlManager = 47DA8B13141D40E70042AD4A /* Source Control */;
 		userBuildSettings = {
@@ -208,7 +209,7 @@
 		fRef = 024BF5401422BCD500FF95F4 /* CreditsMenu.m */;
 		name = "CreditsMenu.m: 77";
 		rLen = 0;
-		rLoc = 2823;
+		rLoc = 2136;
 		rType = 0;
 		vrLen = 1742;
 		vrLoc = 1056;
@@ -218,7 +219,7 @@
 		fRef = 024BF5401422BCD500FF95F4 /* CreditsMenu.m */;
 		name = "CreditsMenu.m: 77";
 		rLen = 0;
-		rLoc = 2823;
+		rLoc = 2136;
 		rType = 0;
 		vrLen = 1612;
 		vrLoc = 1056;
@@ -228,7 +229,7 @@
 		fRef = 024BF5401422BCD500FF95F4 /* CreditsMenu.m */;
 		name = "CreditsMenu.m: 77";
 		rLen = 0;
-		rLoc = 2823;
+		rLoc = 2136;
 		rType = 0;
 		vrLen = 1639;
 		vrLoc = 1763;
@@ -238,7 +239,7 @@
 		fRef = 024BF5401422BCD500FF95F4 /* CreditsMenu.m */;
 		name = "CreditsMenu.m: 74";
 		rLen = 0;
-		rLoc = 2527;
+		rLoc = 1978;
 		rType = 0;
 		vrLen = 1637;
 		vrLoc = 1763;
@@ -248,10 +249,20 @@
 		fRef = 024BF5401422BCD500FF95F4 /* CreditsMenu.m */;
 		name = "CreditsMenu.m: 77";
 		rLen = 0;
-		rLoc = 2669;
+		rLoc = 1982;
 		rType = 0;
 		vrLen = 1709;
 		vrLoc = 1763;
+	};
+	47DA8B521424F0180042AD4A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 024BF5401422BCD500FF95F4 /* CreditsMenu.m */;
+		name = "CreditsMenu.m: 65";
+		rLen = 0;
+		rLoc = 1927;
+		rType = 0;
+		vrLen = 1319;
+		vrLoc = 1681;
 	};
 	506EE05D10304ED200A389B3 /* cocos2d libraries */ = {
 		activeExec = 0;

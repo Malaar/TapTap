@@ -65,15 +65,6 @@
 	webView.opaque = NO;
 	webView.backgroundColor = [UIColor clearColor];
 	
-	NSString *imagePath = [[NSBundle mainBundle] resourcePath];
-	imagePath = [imagePath stringByReplacingOccurrencesOfString:@"/" withString:@"//"];
-	imagePath = [imagePath stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
-	
-	NSString *HTMLData = @"<html style=\"background-color: transparent \" align = center> <img src=\"KiKSoftLogo.gif\"/> <H2>KiKSoft</h2><h3>Developers: </h3> Malaar <br/> Yuriy Bosov<br/> KiT<br/> <h3>Design:</h3> Grigory Petrus' <h3>Music:</h3>Anonimous</html>";
-	
-	imagePath = [imagePath stringByAppendingString:@"Credits.html"];
-	
-	//[webView loadHTMLString:HTMLData baseURL:[NSURL URLWithString: [NSString stringWithFormat:@"file:/%@//",imagePath]]];
 	[webView loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"Credits" ofType:@"html"]isDirectory:NO]]];
 	[[[CCDirector sharedDirector] openGLView] addSubview:webView];  
 }
