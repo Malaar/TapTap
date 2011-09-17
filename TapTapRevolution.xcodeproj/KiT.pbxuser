@@ -1,30 +1,58 @@
 // !$*UTF8*$!
 {
+	022328D413F82B4700DA78D6 /* XMenuButton.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {755, 650}}";
+			sepNavSelRange = "{319, 0}";
+			sepNavVisRange = "{0, 877}";
+		};
+	};
 	024BF53F1422BCD500FF95F4 /* CreditsMenu.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {755, 478}}";
-			sepNavSelRange = "{138, 96}";
+			sepNavSelRange = "{315, 0}";
 			sepNavVisRange = "{0, 337}";
 		};
 	};
 	024BF5401422BCD500FF95F4 /* CreditsMenu.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {755, 1521}}";
+			sepNavIntBoundsRect = "{{0, 0}, {755, 1508}}";
 			sepNavSelRange = "{162, 30}";
 			sepNavVisRange = "{0, 1024}";
 		};
 	};
+	026E708513F5DEC000809EEF /* MainMenu.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {755, 478}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 316}";
+		};
+	};
 	026E708613F5DEC000809EEF /* MainMenu.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {824, 2899}}";
-			sepNavSelRange = "{7379, 0}";
-			sepNavVisRange = "{6648, 1167}";
+			sepNavIntBoundsRect = "{{0, 0}, {824, 2977}}";
+			sepNavSelRange = "{6839, 26}";
+			sepNavVisRange = "{6982, 1223}";
+		};
+	};
+	0293562013FC876A00568C1B /* LevelMenu.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {755, 754}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 902}";
+		};
+	};
+	0293562113FC876A00568C1B /* LevelMenu.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {817, 3159}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 902}";
 		};
 	};
 	029A1FC1141B634B00AEE017 /* PackInfo.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {755, 478}}";
-			sepNavSelRange = "{0, 0}";
+			sepNavSelRange = "{199, 0}";
 			sepNavVisRange = "{0, 767}";
 		};
 	};
@@ -33,6 +61,27 @@
 			sepNavIntBoundsRect = "{{0, 0}, {755, 1482}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{788, 1060}";
+		};
+	};
+	029A1FC4141B634B00AEE017 /* TapTapManager.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {755, 494}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 917}";
+		};
+	};
+	029A1FC5141B634B00AEE017 /* XSettings.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {755, 520}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{40, 781}";
+		};
+	};
+	029A1FC6141B634B00AEE017 /* XSettings.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {755, 1703}}";
+			sepNavSelRange = "{978, 5}";
+			sepNavVisRange = "{965, 794}";
 		};
 	};
 	1D6058900D05DD3D006BFB54 /* TapTapRevolution */ = {
@@ -267,15 +316,29 @@
 	47DA8B551424F6C70042AD4A /* OptionsMenu.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {755, 478}}";
-			sepNavSelRange = "{324, 0}";
-			sepNavVisRange = "{0, 350}";
+			sepNavSelRange = "{381, 0}";
+			sepNavVisRange = "{0, 406}";
 		};
 	};
 	47DA8B561424F6C70042AD4A /* OptionsMenu.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {873, 1599}}";
-			sepNavSelRange = "{1375, 0}";
-			sepNavVisRange = "{1018, 1604}";
+			sepNavIntBoundsRect = "{{0, 0}, {936, 2301}}";
+			sepNavSelRange = "{4918, 0}";
+			sepNavVisRange = "{0, 1028}";
+		};
+	};
+	47DA8B7D142525130042AD4A /* PackMenu.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {755, 478}}";
+			sepNavSelRange = "{263, 0}";
+			sepNavVisRange = "{0, 343}";
+		};
+	};
+	47DA8B7E142525130042AD4A /* PackMenu.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {873, 1261}}";
+			sepNavSelRange = "{2549, 0}";
+			sepNavVisRange = "{1753, 1204}";
 		};
 	};
 	506EE05D10304ED200A389B3 /* cocos2d libraries */ = {

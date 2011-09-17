@@ -14,6 +14,7 @@
 #import "CreditsMenu.h"
 #import "LevelMenu.h"
 #import "OptionsMenu.h"
+#import "PackMenu.h"
 
 
 //==============================================================================
@@ -183,7 +184,8 @@
 - (void) playButtonPressed
 {
 	// temporrary
-	[[CCDirector sharedDirector] replaceScene:[GameScene scene]];
+	//[[CCDirector sharedDirector] replaceScene:[GameScene scene]];
+	[[CCDirector sharedDirector] replaceScene:[PackMenu scene]];
 }
 
 //==============================================================================
