@@ -7,7 +7,7 @@
 //
 
 #import "PackMenu.h"
-
+#import "LevelMenu.h"
 
 //==============================================================================
 //==============================================================================
@@ -32,16 +32,6 @@
 	return scene;
 }
 
-//==============================================================================
-- (id) init
-{
-	if((self = [super init]))
-	{
-		self.isTouchEnabled = YES;
-	}
-	
-	return self;
-}
 //==============================================================================
 - (void) loadResources
 {
@@ -152,23 +142,38 @@
 
 //==============================================================================
 - (void) tap1ButtonPressed
-{}
+{
+	CCScene* scene = [CCTransitionFade transitionWithDuration:0.25 scene:[LevelMenu scene] withColor:ccc3(0, 0, 0)];
+	[[CCDirector sharedDirector] replaceScene:scene];
+}
 
 //==============================================================================
-- (void) tap2ButtonPressed
-{}
+-(void) tap2ButtonPressed
+{
+	CCScene* scene = [CCTransitionFade transitionWithDuration:0.25 scene:[LevelMenu scene] withColor:ccc3(0, 0, 0)];
+	[[CCDirector sharedDirector] replaceScene:scene];
+}
 
 //==============================================================================
 - (void) tap3ButtonPressed
-{}
+{
+	CCScene* scene = [CCTransitionFade transitionWithDuration:0.25 scene:[LevelMenu scene] withColor:ccc3(0, 0, 0)];
+	[[CCDirector sharedDirector] replaceScene:scene];
+}
 
 //==============================================================================
 - (void) tap4ButtonPressed
-{}
+{
+	CCScene* scene = [CCTransitionFade transitionWithDuration:0.25 scene:[LevelMenu scene] withColor:ccc3(0, 0, 0)];
+	[[CCDirector sharedDirector] replaceScene:scene];
+}
 
 //==============================================================================
 - (void) tap5ButtonPressed
-{}
+{
+	CCScene* scene = [CCTransitionFade transitionWithDuration:0.25 scene:[LevelMenu scene] withColor:ccc3(0, 0, 0)];
+	[[CCDirector sharedDirector] replaceScene:scene];
+}
 //==============================================================================
 //==============================================================================
 //==============================================================================

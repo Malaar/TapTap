@@ -15,6 +15,7 @@
 #import "LevelMenu.h"
 #import "OptionsMenu.h"
 #import "PackMenu.h"
+#import "HelpMenu.h"
 
 
 //==============================================================================
@@ -191,8 +192,8 @@
 //==============================================================================
 - (void) helpButtonPressed
 {
-	CCScene* scene = [CCTransitionFade transitionWithDuration:0.25 scene:[LevelMenu scene] withColor:ccc3(0, 0, 0)];
-	[[CCDirector sharedDirector] replaceScene:scene];
+	//CCScene* scene = [CCTransitionFade transitionWithDuration:0.25 scene:[HelpMenu scene] withColor:ccc3(0, 0, 0)];
+	[[CCDirector sharedDirector] replaceScene:[HelpMenu scene]];
 }
 
 //==============================================================================

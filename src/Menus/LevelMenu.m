@@ -8,6 +8,7 @@
 
 #import "LevelMenu.h"
 #import "MainMenu.h"
+#import "PackMenu.h"
 #import "CocoaExtentions.h"
 #import "XSimpleSkinManager.h"
 #import "TapTapManager.h"
@@ -227,7 +228,7 @@
 //==============================================================================
 - (void) backButtonPressed
 {
-	CCScene* scene = [CCTransitionFade transitionWithDuration:0.25 scene:[MainMenu scene] withColor:ccc3(0, 0, 0)];
+	CCScene* scene = [CCTransitionFade transitionWithDuration:0.25 scene:[PackMenu scene] withColor:ccc3(0, 0, 0)];
 	[[CCDirector sharedDirector] replaceScene:scene];
 }
 
