@@ -264,8 +264,12 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateExpansionKey</key>
 							<array>
 								<string>29B97314FDCFA39411CA2CEA</string>
+								<string>025978C113F46F6800518A9C</string>
+								<string>025978C213F46F6800518A9C</string>
 								<string>025978AE13F46F4D00518A9C</string>
 								<string>025978AF13F46F4D00518A9C</string>
+								<string>025978B313F46F4D00518A9C</string>
+								<string>025978B613F46F4D00518A9C</string>
 								<string>0259789F13F46F4D00518A9C</string>
 								<string>025978A213F46F4D00518A9C</string>
 								<string>025978A513F46F4D00518A9C</string>
@@ -275,13 +279,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>41</integer>
-									<integer>27</integer>
+									<integer>179</integer>
+									<integer>165</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 187}, {186, 559}}</string>
+							<string>{{0, 2960}, {186, 559}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -330,7 +334,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>47DA8C051425830B0042AD4A</string>
+										<string>47DA8C3514258DE20042AD4A</string>
 										<key>history</key>
 										<array>
 											<string>47DA8B2E1424DF710042AD4A</string>
@@ -338,14 +342,12 @@
 											<string>47DA8BC014256D6C0042AD4A</string>
 											<string>47DA8BC114256D6C0042AD4A</string>
 											<string>47DA8BC214256D6C0042AD4A</string>
-											<string>47DA8BC314256D6C0042AD4A</string>
 											<string>47DA8BC414256D6C0042AD4A</string>
 											<string>47DA8BC514256D6C0042AD4A</string>
 											<string>47DA8BC614256D6C0042AD4A</string>
 											<string>47DA8BC714256D6C0042AD4A</string>
 											<string>47DA8BC914256D6C0042AD4A</string>
 											<string>47DA8BCA14256D6C0042AD4A</string>
-											<string>47DA8BCB14256D6C0042AD4A</string>
 											<string>47DA8BCC14256D6C0042AD4A</string>
 											<string>47DA8BCD14256D6C0042AD4A</string>
 											<string>47DA8BCE14256D6C0042AD4A</string>
@@ -354,12 +356,22 @@
 											<string>47DA8BE0142573680042AD4A</string>
 											<string>47DA8BE3142573680042AD4A</string>
 											<string>47DA8BF614257EEF0042AD4A</string>
-											<string>47DA8BF714257EEF0042AD4A</string>
 											<string>47DA8BF914257EEF0042AD4A</string>
-											<string>47DA8C001425816B0042AD4A</string>
 											<string>47DA8C011425816B0042AD4A</string>
-											<string>47DA8C021425816B0042AD4A</string>
-											<string>47DA8C031425816B0042AD4A</string>
+											<string>47DA8C0E142589240042AD4A</string>
+											<string>47DA8C0F142589240042AD4A</string>
+											<string>47DA8C10142589240042AD4A</string>
+											<string>47DA8C11142589240042AD4A</string>
+											<string>47DA8C12142589240042AD4A</string>
+											<string>47DA8C13142589240042AD4A</string>
+											<string>47DA8C14142589240042AD4A</string>
+											<string>47DA8C15142589240042AD4A</string>
+											<string>47DA8C2A14258CEF0042AD4A</string>
+											<string>47DA8C2B14258CEF0042AD4A</string>
+											<string>47DA8C2C14258CEF0042AD4A</string>
+											<string>47DA8C2D14258CEF0042AD4A</string>
+											<string>47DA8C3314258DE20042AD4A</string>
+											<string>47DA8C3414258DE20042AD4A</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -658,7 +670,7 @@
 			<key>WindowToolGUID</key>
 			<string>47DA889314118E720042AD4A</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>

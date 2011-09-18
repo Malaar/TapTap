@@ -22,6 +22,8 @@
 {
 	CCMenuItemSprite* bgSprite;
 }
+
+- (id)initWithDataFrame:(NSString*)frameName;
 @end
 
 //==============================================================================

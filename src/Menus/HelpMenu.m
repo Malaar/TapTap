@@ -14,14 +14,19 @@
 
 @implementation HelpSlot
 
-- (void) configureChilds
+- (id)initWithDataFrame:(NSString*)frameName
 {
-	bgSprite = [CCMenuItemSprite itemFromNormalSprite:[CCSprite spriteWithSpriteFrameName:@"HelpSlotBG.png"]
-									   selectedSprite:nil];
-
-	CCMenu* menu = [CCMenu menuWithItems:bgSprite, nil];
-	[self addChild:menu];
+	if( (self = [super init]) )
+	{
+		bgSprite = [CCMenuItemSprite itemFromNormalSprite:[CCSprite spriteWithSpriteFrameName:frameName]
+										   selectedSprite:nil];
+		
+		CCMenu* menu = [CCMenu menuWithItems:bgSprite, nil];
+		[self addChild:menu];
+	}
 	
+	return self;
+
 }
 
 @end
@@ -77,7 +82,7 @@
 	NSMutableArray* slots = [NSMutableArray array];
 	for(int i = 0; i < 5; ++i)
 	{
-		HelpSlot* slot = [[HelpSlot new] autorelease];
+		HelpSlot* slot = [[[HelpSlot alloc ]initWithDataFrame:@"HelpSlotBG.png"] autorelease];
 		[slots addObject:slot];
 	}
 	XScrollPanel* sc = [[XScrollPanel alloc] initWithSlots:slots widthOffset:200];
