@@ -8,7 +8,23 @@
 
 #import "HelpMenu.h"
 
+//==============================================================================
+//==============================================================================
+//==============================================================================
 
+@implementation HelpSlot
+
+- (void) configureChilds
+{
+	bgSprite = [CCMenuItemSprite itemFromNormalSprite:[CCSprite spriteWithSpriteFrameName:@"HelpSlotBG.png"]
+									   selectedSprite:nil];
+
+	CCMenu* menu = [CCMenu menuWithItems:bgSprite, nil];
+	[self addChild:menu];
+	
+}
+
+@end
 //==============================================================================
 //==============================================================================
 //==============================================================================
@@ -53,6 +69,24 @@
 	CCSprite* bg = [CCSprite spriteWithSpriteFrameName:@"HelpMenuBG.png"];
 	[self addChild:bg z:0];
 	bg.anchorPoint = ccp(0.0f,0.0f); 
+	
+	bg.anchorPoint = ccp(0.0f, 0.0f);
+	bg.position = ccp(0.0f, 0.0f);
+	
+	// scroll panel
+	NSMutableArray* slots = [NSMutableArray array];
+	for(int i = 0; i < 5; ++i)
+	{
+		HelpSlot* slot = [[HelpSlot new] autorelease];
+		[slots addObject:slot];
+	}
+	XScrollPanel* sc = [[XScrollPanel alloc] initWithSlots:slots widthOffset:200];
+	sc.delegate = self;
+	sc.showPagesIndicator = YES;
+	sc.minimumTouchLengthToSlide = 1;
+	sc.minimumTouchLengthToChangePage = 20;
+	[self addChild:sc];
+	
 }
 
 //==============================================================================
@@ -84,5 +118,9 @@
 {
     [[CCDirector sharedDirector] replaceScene:[MainMenu scene]];
 }
+
+//==============================================================================
+//==============================================================================
+//==============================================================================
 
 @end

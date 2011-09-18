@@ -281,7 +281,7 @@
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 194}, {186, 559}}</string>
+							<string>{{0, 187}, {186, 559}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -330,7 +330,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>47DA8BE7142573680042AD4A</string>
+										<string>47DA8C051425830B0042AD4A</string>
 										<key>history</key>
 										<array>
 											<string>47DA8B2E1424DF710042AD4A</string>
@@ -350,15 +350,16 @@
 											<string>47DA8BCD14256D6C0042AD4A</string>
 											<string>47DA8BCE14256D6C0042AD4A</string>
 											<string>47DA8BCF14256D6C0042AD4A</string>
-											<string>47DA8BD114256D6C0042AD4A</string>
-											<string>47DA8BD214256D6C0042AD4A</string>
 											<string>47DA8BD614256D6C0042AD4A</string>
 											<string>47DA8BE0142573680042AD4A</string>
-											<string>47DA8BE1142573680042AD4A</string>
-											<string>47DA8BE2142573680042AD4A</string>
 											<string>47DA8BE3142573680042AD4A</string>
-											<string>47DA8BE5142573680042AD4A</string>
-											<string>47DA8BE6142573680042AD4A</string>
+											<string>47DA8BF614257EEF0042AD4A</string>
+											<string>47DA8BF714257EEF0042AD4A</string>
+											<string>47DA8BF914257EEF0042AD4A</string>
+											<string>47DA8C001425816B0042AD4A</string>
+											<string>47DA8C011425816B0042AD4A</string>
+											<string>47DA8C021425816B0042AD4A</string>
+											<string>47DA8C031425816B0042AD4A</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -586,7 +587,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>OptionsMenu.m</string>
+								<string>HelpMenu.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -804,7 +805,7 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CDD528C0622207200134675</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>LevelMenu.h</string>
+										<string>XScrollPanel.h</string>
 										<key>StatusBarVisibility</key>
 										<true/>
 									</dict>
